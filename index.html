@@ -2,6 +2,8 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -239,48 +241,46 @@
                 </div>
 
                 <!-- Conceptual CSS Illustration (Right) -->
-                <div class="relative w-full h-[480px] md:h-[520px] rounded-3xl overflow-hidden flex items-center justify-center border border-slate-100 dark:border-slate-800/40 bg-slate-50/25 dark:bg-slate-900/10 shadow-inner backdrop-blur-sm" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
                     
                     <!-- Radial background glows -->
                     <div class="absolute w-64 h-64 rounded-full bg-primary/8 dark:bg-primary/5 blur-3xl pointer-events-none"></div>
                     <div class="absolute w-64 h-64 rounded-full bg-secondary/8 dark:bg-secondary/5 blur-3xl pointer-events-none translate-x-12 translate-y-12"></div>
                     
                     <!-- Center Gradix Card -->
-                    <div class="relative w-48 h-48 md:w-56 md:h-56 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-2xl rounded-[32px] flex flex-col items-center justify-center p-6 transition-all duration-500 hover:scale-105 z-20 cursor-default select-none group">
-                        <!-- Glass shine highlight -->
-                        <div class="absolute inset-0 rounded-[32px] bg-gradient-to-tr from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
-                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-10 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
-                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
+                    <div class="relative w-48 h-48 md:w-56 md:h-56 flex flex-col items-center justify-center p-6 transition-all duration-500 hover:scale-110 z-20 cursor-default select-none group">
+                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-12 md:h-14 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
+                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-12 md:h-14 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
                     </div>
 
                     <!-- Orbiting Pill Tags -->
                     <!-- 1. Web Dev -->
-                    <div class="absolute top-[12%] left-[10%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-1">
+                    <div class="absolute top-[24%] left-[20%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-1">
                         <i class="fa-solid fa-globe text-[#2563EB]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web Dev</span>
                     </div>
                     <!-- 2. UI / UX -->
-                    <div class="absolute top-[22%] right-[6%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-2">
+                    <div class="absolute top-[28%] right-[14%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-2">
                         <i class="fa-solid fa-palette text-[#8B5CF6]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI / UX</span>
                     </div>
                     <!-- 3. Software -->
-                    <div class="absolute top-[44%] right-[4%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-3">
+                    <div class="absolute top-[48%] right-[12%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-3">
                         <i class="fa-solid fa-code text-[#10B981]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
                     </div>
                     <!-- 4. Apps -->
-                    <div class="absolute top-[74%] right-[8%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-4">
+                    <div class="absolute top-[68%] right-[18%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-4">
                         <i class="fa-solid fa-mobile-screen text-[#F59E0B]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
                     </div>
                     <!-- 5. Marketing -->
-                    <div class="absolute bottom-[8%] left-[28%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-5">
+                    <div class="absolute bottom-[20%] left-[34%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-5">
                         <i class="fa-solid fa-chart-line text-[#EC4899]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
                     </div>
                     <!-- 6. Content -->
-                    <div class="absolute top-[52%] left-[8%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-6">
+                    <div class="absolute top-[50%] left-[18%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-6">
                         <i class="fa-solid fa-pen-nib text-[#06B6D4]"></i>
                         <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
                     </div>
@@ -890,8 +890,8 @@
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
                         <ul class="space-y-3.5 text-sm">
                             <li>
-                                <a href="mailto:hello@gradixtech.com" class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> hello@gradixtech.com
+                                <a href="mailto:gradixtechnologies@gmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> gradixtechnologies@gmail.com
                                 </a>
                             </li>
                             <li>

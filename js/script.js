@@ -641,6 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     const legalNavLinks = document.querySelectorAll('aside nav a');
     const legalSections = document.querySelectorAll('.prose [id]');
+    const scrollContainer = document.getElementById('legal-content-scroll');
     
     if (legalNavLinks.length > 0 && legalSections.length > 0) {
         const activeSections = new Set();
@@ -675,7 +676,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }, {
-            rootMargin: '-15% 0px -60% 0px',
+            root: scrollContainer || null,
+            rootMargin: '-10% 0px -55% 0px',
             threshold: 0
         });
 
@@ -684,8 +686,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Special case fallback: scroll to bottom highlights the very last item (Contact Us)
-        window.addEventListener('scroll', () => {
-            const isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 60;
+        const scrollTarget = scrollContainer || window;
+        scrollTarget.addEventListener('scroll', () => {
+            let isBottom = false;
+            if (scrollContainer) {
+                isBottom = (scrollContainer.scrollTop + scrollContainer.clientHeight) >= scrollContainer.scrollHeight - 25;
+            } else {
+                isBottom = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 60;
+            }
+
             if (isBottom) {
                 isScrollingToBottom = true;
                 const lastSection = legalSections[legalSections.length - 1];
@@ -695,6 +704,34 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 isScrollingToBottom = false;
             }
+        });
+
+        // Intercept sidebar link clicks to smoothly scroll within the container
+        legalNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetHref = link.getAttribute('href');
+                if (!targetHref.startsWith('#')) return;
+                
+                const targetId = targetHref.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement && scrollContainer) {
+                    e.preventDefault();
+                    
+                    const containerTop = scrollContainer.getBoundingClientRect().top;
+                    const elementTop = targetElement.getBoundingClientRect().top;
+                    const relativeTop = elementTop - containerTop + scrollContainer.scrollTop;
+                    
+                    scrollContainer.scrollTo({
+                        top: relativeTop - 12, // Subtle top margin padding
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL hash without causing a page jump
+                    history.pushState(null, null, `#${targetId}`);
+                    highlightSidebarLink(targetId);
+                }
+            });
         });
 
         function highlightSidebarLink(id) {

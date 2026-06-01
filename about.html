@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About Gradix Technologies - Learn about our mission, core values, and the expert leadership engineering scalable enterprise software.">
@@ -61,7 +63,7 @@
     <!-- ==========================================
          C. AMBIENT BACKGROUND GLOWS & BLOB ELEMENTS
          ========================================== -->
-    <div class="relative w-full overflow-hidden ambient-bg">
+    <div class="relative w-full ambient-bg">
         <div class="blob-container">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
@@ -208,16 +210,12 @@
                     <div class="flex flex-col space-y-3">
                         <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">About Us</span>
                         <h1 class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white leading-tight">
-                            Pioneering Enterprise Software Solutions
+                            Who We Are & What Drives Us
                         </h1>
                     </div>
                     
                     <p class="text-textBody dark:text-slate-400 text-base leading-relaxed">
-                        We help startups, small businesses, and enterprises build scalable digital products through innovative technology solutions. Our team specializes in web development, mobile app development, cloud services, and digital transformation.
-                    </p>
-                    
-                    <p class="text-textBody dark:text-slate-400 text-base leading-relaxed">
-                        By integrating deep sector expertise with modern software development life cycles, we create value that elevates user experience, optimizes workflows, and expands operational bandwidth.
+                        Gradix Technologies is a digital solutions company focused on building reliable, scalable, and user-centric technology products. We work with businesses to design and develop web applications, mobile apps, and custom software solutions that solve real problems and support long-term growth.
                     </p>
 
                     <!-- What We Do Best -->
@@ -317,56 +315,227 @@
         </section>
 
         <!-- ==========================================
-             4. LEADERSHIP TEAM SHOWCASE
+             4. OUR PROVEN DIGITAL PROCESS (How We Work)
              ========================================== -->
-        <section id="about-team" class="py-24 relative z-10 px-6 lg:px-8">
+        <section id="home-process" class="py-24 bg-white dark:bg-slate-950 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col items-center text-center space-y-4 mb-16" data-aos="fade-up">
-                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Meet the Team</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
-                        Our Expert Engineering Leadership
+                
+                <div class="flex flex-col items-center text-center space-y-4 mb-20" data-aos="fade-up">
+                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">How We Work</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
+                        Our Proven Digital Process
+                    </h2>
+                    <p class="text-textBody dark:text-slate-400 text-base max-w-2xl leading-relaxed mt-2">
+                        At Gradix Technologies, we follow a structured and practical approach to transform ideas into reliable digital solutions. Our process ensures clarity, efficiency, and scalable growth for your business.
+                    </p>
+                </div>
+
+                <!-- Process Steps Grid with connecting line effect -->
+                <div class="relative grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 z-10" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <!-- Decorative timeline line on desktop/large viewports -->
+                    <div class="hidden lg:block absolute top-[40px] left-[12%] right-[12%] h-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
+                        <div id="timeline-progress-filler" class="h-full w-0 bg-gradient-to-r from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out"></div>
+                    </div>
+
+                    <!-- Decorative timeline line on mobile/tablet viewports -->
+                    <div class="block lg:hidden absolute top-[40px] bottom-[40px] left-[40px] -translate-x-1/2 w-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
+                        <div id="timeline-progress-filler-mobile" class="w-full h-0 bg-gradient-to-b from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out"></div>
+                    </div>
+
+                    <!-- Step 1: Discovery & Consultation -->
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="0">
+                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-lg transition-all duration-500 dark:bg-primary/25 mb-0 lg:mb-6 shrink-0">
+                            <!-- Step Number badge -->
+                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">01</span>
+                            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                        </div>
+                        <div class="flex flex-col text-left lg:text-center">
+                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Discovery & Consultation</h3>
+                            <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
+                                We understand your business goals, challenges, and requirements to ensure the right solution is planned from the beginning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Strategy & Planning -->
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="1">
+                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10 text-secondary border border-secondary/20 shadow-lg transition-all duration-500 dark:bg-secondary/25 mb-0 lg:mb-6 shrink-0">
+                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-secondary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">02</span>
+                            <i class="fa-solid fa-chess-knight text-2xl"></i>
+                        </div>
+                        <div class="flex flex-col text-left lg:text-center">
+                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Strategy & Planning</h3>
+                            <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
+                                We design a clear roadmap including architecture, features, timelines, and technology choices for smooth execution.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Development & Execution -->
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="2">
+                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 text-accent border border-accent/20 shadow-lg transition-all duration-500 dark:bg-accent/25 mb-0 lg:mb-6 shrink-0">
+                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-accent text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">03</span>
+                            <i class="fa-solid fa-laptop-code text-2xl"></i>
+                        </div>
+                        <div class="flex flex-col text-left lg:text-center">
+                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Development & Execution</h3>
+                            <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
+                                Our team builds and implements your solution using modern technologies with a strong focus on performance and security.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Launch, Support & Growth -->
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="3">
+                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-lg transition-all duration-500 dark:bg-emerald-500/25 mb-0 lg:mb-6 shrink-0">
+                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">04</span>
+                            <i class="fa-solid fa-chart-line text-2xl"></i>
+                        </div>
+                        <div class="flex flex-col text-left lg:text-center">
+                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Launch, Support & Growth</h3>
+                            <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
+                                After launch, we provide continuous support, improvements, and optimizations to help your business scale confidently.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- CTA Button under steps -->
+                <div class="flex justify-center mt-16" data-aos="fade-up" data-aos-delay="200">
+                    <a href="contact.html" class="btn-young-newt text-sm font-semibold">
+                        Start Your Project <i class="fas fa-arrow-right text-xs ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             5. TESTIMONIALS (White-Catfish)
+             ========================================== -->
+        <section id="testimonials"
+            class="py-24 bg-bgSecondary dark:bg-slate-900/40 relative z-10 px-6 lg:px-8 border-y border-slate-100 dark:border-slate-900">
+            <div class="max-w-2xl mx-auto" data-aos="zoom-in">
+
+                <div class="flex flex-col items-center text-center space-y-4 mb-16">
+                    <span
+                        class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Testimonials</span>
+                    <h2
+                        class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
+                        What clients <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">say about us</span>
                     </h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="zoom-in">
-                    
-                    <!-- Leader 1 -->
-                    <div class="glass-card p-8 rounded-2xl border border-borderLight dark:border-slate-800 flex flex-col items-center text-center group">
-                        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white text-3xl font-bold font-poppins shadow-md mb-6 border border-white/60 dark:border-slate-850 group-hover:scale-110 transition-transform duration-300">
-                            JD
-                        </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-1">John Doe</h3>
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider mb-4">Chief Executive Officer</span>
-                        <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed">
-                            John has spent 12+ years directing enterprise digital transformation initiatives, architecting cloud systems and managing SaaS partnerships.
-                        </p>
-                    </div>
+                <div class="white-catfish-slider relative">
+                    <div class="white-catfish-track">
 
-                    <!-- Leader 2 -->
-                    <div class="glass-card p-8 rounded-2xl border border-borderLight dark:border-slate-800 flex flex-col items-center text-center group">
-                        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-[#EC4899] to-[#8B5CF6] flex items-center justify-center text-white text-3xl font-bold font-poppins shadow-md mb-6 border border-white/60 dark:border-slate-850 group-hover:scale-110 transition-transform duration-300">
-                            SC
+                        <!-- Testimonial 1 -->
+                        <div class="white-catfish-slide">
+                            <div class="tidy-card">
+                                <div class="tidy-content">
+                                    <div class="tidy-header">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                PS
+                                            </div>
+                                            <div class="flex flex-col text-left">
+                                                <strong>Ms Prithika Sri</strong>
+                                                <p class="para">Director Nexyuga Innovations</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tidy-footer">
+                                        <svg viewBox="0 0 24 24" class="quotes text-primary dark:text-secondary fill-current">
+                                            <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                        </svg>
+                                        <p class="para">
+                                            “What we expected was great, but Gradix delivered even better Their solutions exceeded our expectations and truly made a difference.”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-1">Sarah Connor</h3>
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider mb-4">Head of Mobile Engineering</span>
-                        <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed">
-                            An expert mobile developer specializing in high-performance Flutter systems. Driven by smooth 60fps layouts and clean local storage architectures.
-                        </p>
-                    </div>
 
-                    <!-- Leader 3 -->
-                    <div class="glass-card p-8 rounded-2xl border border-borderLight dark:border-slate-800 flex flex-col items-center text-center group">
-                        <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-[#10B981] to-[#3B82F6] flex items-center justify-center text-white text-3xl font-bold font-poppins shadow-md mb-6 border border-white/60 dark:border-slate-850 group-hover:scale-110 transition-transform duration-300">
-                            MK
+                        <!-- Testimonial 2 -->
+                        <div class="white-catfish-slide">
+                            <div class="tidy-card">
+                                <div class="tidy-content">
+                                    <div class="tidy-header">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                MV
+                                            </div>
+                                            <div class="flex flex-col text-left">
+                                                <strong>Mr Vishnu</strong>
+                                                <p class="para">Xiaomi Retails</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tidy-footer">
+                                        <svg viewBox="0 0 24 24" class="quotes text-secondary dark:text-emerald-400 fill-current">
+                                            <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                        </svg>
+                                        <p class="para">
+                                            “Working with the team exceeded our expectations Our software performs flawlessly boosts productivity ensures efficiency and makes daily operations effortless.”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-1">Michael Kaiser</h3>
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider mb-4">VP of Operations</span>
-                        <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed">
-                            Michael controls database and container operational flow at Gradix. Focusses on orchestrating Kubernetes channels and secure AWS structures.
-                        </p>
-                    </div>
 
+                        <!-- Testimonial 3 -->
+                        <div class="white-catfish-slide">
+                            <div class="tidy-card">
+                                <div class="tidy-content">
+                                    <div class="tidy-header">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-accent to-orange-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                MP
+                                            </div>
+                                            <div class="flex flex-col text-left">
+                                                <strong>Mr Pradeep</strong>
+                                                <p class="para">Forever Finds</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tidy-footer">
+                                        <svg viewBox="0 0 24 24" class="quotes text-accent dark:text-orange-400 fill-current">
+                                            <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                        </svg>
+                                        <p class="para">
+                                            “The development process was smooth and professional Our custom software now drives growth improves workflow simplifies tasks and delivers real impact.”
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
+                <div class="flex justify-center items-center gap-6 mt-8">
+                    <button id="prev-testimonial"
+                        class="w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-sm hover:scale-105 transition-all duration-300"
+                        aria-label="Previous Testimonial">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
+
+                    <!-- Testimonial Slider Navigation Dots -->
+                    <div id="testimonial-dots" class="flex gap-2.5 items-center justify-center">
+                        <button class="testimonial-dot hover:bg-primary/50 active-dot" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="testimonial-dot hover:bg-primary/50" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="testimonial-dot hover:bg-primary/50" data-slide="2" aria-label="Go to slide 3"></button>
+                    </div>
+
+                    <button id="next-testimonial"
+                        class="w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-sm hover:scale-105 transition-all duration-300"
+                        aria-label="Next Testimonial">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+
             </div>
         </section>
 
@@ -421,8 +590,8 @@
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
                         <ul class="space-y-3.5 text-sm">
                             <li>
-                                <a href="mailto:hello@gradixtech.com" class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> hello@gradixtech.com
+                                <a href="mailto:gradixtechnologies@gmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> gradixtechnologies@gmail.com
                                 </a>
                             </li>
                             <li>
