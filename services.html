@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Services - Gradix Technologies offers premium web development, mobile applications, AI engines, cloud pipelines, and ERP systems.">
+    
+    <title>Our Services | Gradix Technologies</title>
+    
+    <!-- Flicker-free Theme Loading Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
+    <!-- Tailwind CSS CDN with Custom Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#06B6D4',
+                        accent: '#F97316',
+                        bgPrimary: '#FFFFFF',
+                        bgSecondary: '#F8FAFC',
+                        textHeading: '#0F172A',
+                        textBody: '#475569',
+                        borderLight: '#E2E8F0',
+                    },
+                    fontFamily: {
+                        poppins: ['Outfit', 'sans-serif'],
+                        inter: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) Stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom Style System -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
+
+    <!-- ==========================================
+         B. SCROLL PROGRESS BAR
+         ========================================== -->
+    <div id="scroll-progress"></div>
+
+    <!-- ==========================================
+         C. AMBIENT BACKGROUND GLOWS & BLOB ELEMENTS
+         ========================================== -->
+    <div class="relative w-full overflow-hidden ambient-bg">
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <!-- ==========================================
+             1. NAVBAR (Sticky & Glassmorphism with Dark Toggle)
+             ========================================== -->
+        <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-400 glass-navbar" data-aos="fade-down">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
+                    <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-10 w-auto block dark:hidden">
+                    <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto hidden dark:block">
+                </a>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="nav-link py-2 text-sm">Home</a>
+                    <a href="about.html" class="nav-link py-2 text-sm">About</a>
+                    <a href="services.html" class="nav-link py-2 text-sm active-nav">Services</a>
+                    <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
+                    <a href="contact.html" class="nav-link py-2 text-sm">Contact Us</a>
+                </nav>
+
+                <!-- Action Button & Dark Mode Toggle (Desktop) -->
+                <div class="hidden md:flex items-center gap-6">
+                    <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
+                         <!-- Clouds in Light Mode -->
+                         <span class="dribbble-cloud dc-1"></span>
+                         <span class="dribbble-cloud dc-2"></span>
+                         <span class="dribbble-cloud dc-3"></span>
+                         
+                         <!-- Stars in Dark Mode -->
+                         <span class="dribbble-star ds-1"></span>
+                         <span class="dribbble-star ds-2"></span>
+                         <span class="dribbble-star ds-3"></span>
+                         
+                         <!-- Sun/Moon Handle -->
+                         <div class="dribbble-toggle-handle">
+                             <!-- Craters on the Moon -->
+                             <span class="dribbble-crater dcr-1"></span>
+                             <span class="dribbble-crater dcr-2"></span>
+                             <span class="dribbble-crater dcr-3"></span>
+                         </div>
+                     </button>
+                     
+                     <a href="contact.html" class="btn-smart-moth">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="fill-current">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Get Started</span>
+                    </a>
+                </div>
+
+                <!-- Hamburger Button & Theme Toggle (Mobile) -->
+                <div class="md:hidden flex items-center gap-4 z-50">
+                    <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
+                         <!-- Clouds in Light Mode -->
+                         <span class="dribbble-cloud dc-1"></span>
+                         <span class="dribbble-cloud dc-2"></span>
+                         <span class="dribbble-cloud dc-3"></span>
+                         
+                         <!-- Stars in Dark Mode -->
+                         <span class="dribbble-star ds-1"></span>
+                         <span class="dribbble-star ds-2"></span>
+                         <span class="dribbble-star ds-3"></span>
+                         
+                         <!-- Sun/Moon Handle -->
+                         <div class="dribbble-toggle-handle">
+                             <!-- Craters on the Moon -->
+                             <span class="dribbble-crater dcr-1"></span>
+                             <span class="dribbble-crater dcr-2"></span>
+                             <span class="dribbble-crater dcr-3"></span>
+                         </div>
+                     </button>
+                     
+                     <button id="hamburger-btn" class="flex flex-col justify-between w-6 h-5 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1 group" aria-label="Toggle Navigation Menu">
+                         <span class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300 origin-left"></span>
+                         <span class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300"></span>
+                         <span class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300 origin-left"></span>
+                     </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-nav" class="mobile-nav-panel flex flex-col justify-between p-8">
+            <div class="flex flex-col gap-6 mt-8">
+                <a href="index.html" class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-home mr-3 text-primary"></i>Home</a>
+                <a href="about.html" class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-user-group mr-3 text-primary"></i>About</a>
+                <a href="services.html" class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-gear mr-3 text-primary"></i>Services</a>
+                <a href="projects.html" class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-folder-open mr-3 text-primary"></i>Projects</a>
+                <a href="contact.html" class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-envelope mr-3 text-primary"></i>Contact Us</a>
+            </div>
+            <div>
+                <a href="contact.html" class="btn-smart-moth w-full justify-center">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="fill-current">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Get Started</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             2. SERVICES DETAILED SECTION
+             ========================================== -->
+        <section id="services-hero" class="pt-36 pb-24 relative z-10 px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Page Header -->
+                <div class="flex flex-col items-center text-center space-y-4 mb-20" data-aos="fade-up">
+                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our Services</span>
+                    <h1 class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white max-w-3xl leading-tight">
+                        Premium Software Engineering Services
+                    </h1>
+                    <p class="text-textBody dark:text-slate-400 text-base max-w-xl">
+                        We deploy state-of-the-art framework technology stacks to create high-performance applications, cloud backbones, and responsive visual branding designs.
+                    </p>
+                </div>
+
+                <!-- Core 10 Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <!-- 1. Website Development -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-primary">
+                            <i class="fa-solid fa-code text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Website Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Ultra-fast, fully responsive corporate websites built using premium frameworks like React, Next.js, and Tailwind CSS. Fully optimized for outstanding SEO scores.
+                        </p>
+                    </div>
+
+                    <!-- 2. Web Application Development -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-secondary">
+                            <i class="fa-solid fa-laptop-code text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Web App Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Premium, highly interactive single-page and multi-page web software designed to streamline processes, featuring high-speed real-time database architecture.
+                        </p>
+                    </div>
+
+                    <!-- 3. Mobile App Development -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-accent">
+                            <i class="fa-solid fa-mobile-screen-button text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Mobile App Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Cross-platform iOS and Android mobile platforms created with Flutter and React Native. Smooth 60fps animations, fully responsive UI controls, and offline capabilities.
+                        </p>
+                    </div>
+
+                    <!-- 4. E-Commerce Development -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-emerald-500">
+                            <i class="fa-solid fa-cart-shopping text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">E-Commerce Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Custom digital store platforms configured with premium payment modules (Stripe, PayPal), interactive product catalogs, search engines, and smart carts.
+                        </p>
+                    </div>
+
+                    <!-- 5. UI/UX Design -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-indigo-500">
+                            <i class="fa-solid fa-compass-drafting text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">UI/UX Design</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Aesthetic user interfaces built on deep target research. Premium interactive wireframes, typography design systems, layout wireframing, and Figma prototyping.
+                        </p>
+                    </div>
+
+                    <!-- 6. Cloud Solutions -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-sky-500">
+                            <i class="fa-solid fa-cloud text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Cloud Solutions</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Secure cloud deployment structures utilizing AWS, Azure, and Google Cloud. Continuous container pipelines (Docker, Kubernetes) and serverless databases.
+                        </p>
+                    </div>
+
+                    <!-- 7. ERP Solutions -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-teal-500">
+                            <i class="fa-solid fa-chart-line text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">ERP Solutions</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Bespoke enterprise resource planning software to map workflow cycles, automate operations, track finances, and manage inventories in one dashboard.
+                        </p>
+                    </div>
+
+                    <!-- 8. CRM Development -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-rose-500">
+                            <i class="fa-solid fa-users text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">CRM Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Robust Customer Relationship Management portals that organize communication, store customer logs, track conversion funnels, and trigger emails.
+                        </p>
+                    </div>
+
+                    <!-- 9. AI Solutions -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-amber-500">
+                            <i class="fa-solid fa-microchip text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">AI Solutions</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Enterprise-ready artificial intelligence integrations. Smart conversational bots, natural text parsing systems, business analytics, and predictive calculations.
+                        </p>
+                    </div>
+
+                    <!-- 10. Digital Marketing -->
+                    <div class="clever-panther-card group">
+                        <div class="why-card-inner"></div>
+                        <div class="icon-container text-fuchsia-500">
+                            <i class="fa-solid fa-bullhorn text-2xl transition-colors duration-400"></i>
+                        </div>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Digital Marketing</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
+                            Complete digital growth services. Search engine optimization (SEO), data analytics, targeted social campaigns, and brand transformation programs.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             FOOTER (Dark Background)
+             ========================================== -->
+        <footer class="bg-[#0F172A] text-slate-400 relative z-10 pt-20 border-t border-slate-800 dark:border-slate-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 pb-12">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                    
+                    <div class="lg:col-span-4 flex flex-col space-y-6">
+                        <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
+                            <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto">
+                        </a>
+                        <p class="text-sm leading-relaxed max-w-sm">
+                            Redefining enterprise software engineering. We develop high-performance applications, responsive sites, and secure cloud pipelines that drive corporate expansion.
+                        </p>
+                        
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
+                            <a href="https://wa.me/9488783430" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                            <a href="https://x.com/gradix_tech" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 flex flex-col space-y-6 text-left">
+                        <h4 class="font-poppins font-bold text-white text-base tracking-wider">Quick Links</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                            <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                            <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+                            <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-3 flex flex-col space-y-6 text-left">
+                        <h4 class="font-poppins font-bold text-white text-base tracking-wider">Services</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Web Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">UI / UX Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Software Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">App Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Content Creations</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-3 flex flex-col space-y-6 text-left">
+                        <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li>
+                                <a href="mailto:hello@gradixtech.com" class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> hello@gradixtech.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+919488783430" class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-phone text-secondary text-xs"></i> +91 94887 83430
+                                </a>
+                            </li>
+                            <li class="flex items-start gap-2 leading-relaxed text-xs text-slate-400">
+                                <i class="fa-solid fa-map-location-dot text-secondary text-xs mt-1 shrink-0"></i>
+                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode, Namakkal, 637 215.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs gap-4">
+                    <span>&copy; 2026 Gradix Technologies. All rights reserved.</span>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                        <a href="contact.html" class="hover:text-white transition-colors">Sitemap</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ==========================================
+         D. FLOATING ACTION BACK TO TOP BUTTON
+         ========================================== -->
+    <button id="back-to-top" aria-label="Scroll Back To Top">
+        <i class="fas fa-arrow-up text-lg"></i>
+    </button>
+
+    <!-- AOS Library Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom Page Script -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
