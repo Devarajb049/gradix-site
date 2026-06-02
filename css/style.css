@@ -285,13 +285,17 @@ h6 {
 .clever-panther-card {
     position: relative;
     padding: 34px 26px;
-    background: #ffffff;
+    background: transparent !important;
+    border: none !important;
     border-radius: 20px;
-    border: 1px solid #E2E8F0;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
     z-index: 1;
+}
+
+.clever-panther-card .why-card-inner {
+    border-radius: 18px;
 }
 
 .clever-panther-card::before {
@@ -301,22 +305,32 @@ h6 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(from 0deg, transparent 270deg, rgba(37, 99, 235, 0.3) 360deg);
+    background: conic-gradient(from 0deg, transparent 270deg, rgba(37, 99, 235, 0.6) 320deg, rgba(6, 182, 212, 0.8) 360deg);
     opacity: 0;
-    transition: opacity 0.5s ease;
-    animation: rotateBg 4s linear infinite paused;
+    transition: opacity 0.4s ease;
+    animation: rotateBg 4s linear infinite;
     z-index: -2;
 }
 
 .clever-panther-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 50px -20px rgba(37, 99, 235, 0.25);
-    border-color: transparent;
 }
 
 .clever-panther-card:hover::before {
     opacity: 1;
-    animation-play-state: running;
+}
+
+.clever-panther-card:hover .why-card-inner {
+    border-color: transparent;
+    box-shadow: 
+        0 20px 40px rgba(37, 99, 235, 0.12),
+        0 0 25px rgba(6, 182, 212, 0.1);
+}
+
+@keyframes rotateBg {
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .clever-panther-card .icon-container {
@@ -392,10 +406,37 @@ h6 {
     position: relative;
 }
 
+/* Glassmorphic Glare Light Sweep Sweep */
+.splendid-firefox-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.splendid-firefox-card:hover::after {
+    left: 150%;
+    transition: left 0.8s ease-in-out;
+}
+
 .splendid-firefox-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(37, 99, 235, 0.2);
-    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12), 0 0 20px rgba(37, 99, 235, 0.05);
+    transform: translateY(-10px) scale(1.01);
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: 
+        0 20px 40px -15px rgba(37, 99, 235, 0.15),
+        0 0 30px rgba(6, 182, 212, 0.08);
 }
 
 .splendid-firefox-img-wrap {
@@ -1114,55 +1155,82 @@ html.dark .btn-young-newt-secondary:hover {
     border: none !important;
     box-shadow: none !important;
     text-align: center;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1;
-    overflow: visible !important;
+    overflow: hidden !important;
+    border-radius: 28px;
+    cursor: pointer;
 }
 
-/* Background blue-indigo gradient plate */
+/* REVOLVING CONIC BORDER LINE EFFECT */
 .why-card::before {
-    content: '';
+    content: "";
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
-    border-radius: 28px;
-    z-index: -2;
+    width: 480px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+        transparent 0deg,
+        transparent 280deg,
+        #2563EB 340deg,
+        #06B6D4 360deg
+    );
     opacity: 0;
-    transform: translate(0, 0) scale(0.95);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Glassy card body */
-.why-card-inner {
-    position: absolute;
-    inset: 0;
-    background: #ffffff;
-    border: 1px solid #E2E8F0;
-    border-radius: 28px;
-    z-index: -1;
-    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: spin 3s linear infinite;
+    z-index: -2;
+    transition: opacity 0.4s ease;
 }
 
 .why-card:hover::before {
     opacity: 1;
-    transform: translate(-10px, 10px) scale(1);
+}
+
+/* GLASSY MASK BODY CARD */
+.why-card-inner {
+    position: absolute;
+    inset: 2px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 26px;
+    z-index: -1;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .why-card:hover .why-card-inner {
-    transform: translate(6px, -6px);
-    border-color: rgba(6, 182, 212, 0.25);
-    box-shadow: 0 30px 60px -15px rgba(37, 99, 235, 0.25), 0 0 30px -5px rgba(6, 182, 212, 0.15);
+    border-color: transparent;
+    background: #ffffff;
 }
 
-/* Float card contents up-right on hover */
-.why-card > *:not(::before):not(.why-card-inner) {
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+/* FADE LIGHT sweep animation */
+.why-card-fade {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(37, 99, 235, 0.12),
+        rgba(6, 182, 212, 0.05),
+        transparent
+    );
+    pointer-events: none;
+    border-radius: 28px;
+    transition: opacity 0.4s ease;
 }
 
-.why-card:hover > h3,
-.why-card:hover > p {
-    transform: translate(6px, -6px);
+.why-card:hover .why-card-fade {
+    animation: why-card-flow 2s ease-in-out infinite;
+    opacity: 1;
+}
+
+/* Content stacked on top of fade sweep */
+.why-card > *:not(::before):not(.why-card-inner):not(.why-card-fade) {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .why-icon {
@@ -1177,11 +1245,13 @@ html.dark .btn-young-newt-secondary:hover {
     color: #ffffff !important;
     font-size: 1.6rem;
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
 }
 
 .why-card:hover .why-icon {
-    transform: translate(6px, -6px) scale(1.1);
+    transform: scale(1.08);
     box-shadow: 0 8px 20px rgba(6, 182, 212, 0.35);
 }
 
@@ -1200,14 +1270,45 @@ html.dark .btn-young-newt-secondary:hover {
     line-height: 1.6;
 }
 
+/* CARD ELEVATION */
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(37, 99, 235, 0.12),
+        0 0 25px rgba(37, 99, 235, 0.08);
+}
+
+/* REVOLVING ANIMATIONS */
+@keyframes spin {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes why-card-flow {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
 /* --- Dark Mode overrides for Service Cards --- */
 html.dark .why-card-inner {
-    background: rgba(15, 23, 42, 0.6) !important;
+    background: #0f172a !important; /* solid slate-900 */
     border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-html.dark .why-card:hover .why-card-inner {
-    border-color: rgba(6, 182, 212, 0.35) !important;
+html.dark .why-card:hover .why-card-inner,
+html.dark .clever-panther-card:hover .why-card-inner {
+    border-color: transparent !important;
+    background: #0f172a !important;
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5), 0 0 30px -5px rgba(6, 182, 212, 0.2) !important;
 }
 
@@ -1843,3 +1944,53 @@ html.dark .hero-illustration-grid {
 .ani-float-4 { animation: float-down-left 4.8s ease-in-out infinite 1.5s; }
 .ani-float-5 { animation: float-left-up 6.2s ease-in-out infinite 2s; }
 .ani-float-6 { animation: float-up-right 5.8s ease-in-out infinite 2.5s; }
+
+/* ==========================================================================
+   M. ORBITING PILLS MAGNETIC CENTER ATTRACTION LOOP (MAXIMUM VISIBILITY)
+   ========================================================================== */
+.orbiting-pill {
+    will-change: transform;
+}
+
+/* Continuous, ultra-slow loop moving towards center and back, synchronized for a unified breathing ripple */
+.pill-1 { animation: magnetic-loop-1 12s ease-in-out infinite; }
+.pill-2 { animation: magnetic-loop-2 12s ease-in-out infinite 0.1s; }
+.pill-3 { animation: magnetic-loop-3 12s ease-in-out infinite 0.2s; }
+.pill-4 { animation: magnetic-loop-4 12s ease-in-out infinite 0.3s; }
+.pill-5 { animation: magnetic-loop-5 12s ease-in-out infinite 0.4s; }
+.pill-6 { animation: magnetic-loop-6 12s ease-in-out infinite 0.5s; }
+
+/* Pause looping motion on hover to allow clean element interaction/focus */
+.hero-illustration-wrapper:hover .orbiting-pill {
+    animation-play-state: paused;
+}
+
+@keyframes magnetic-loop-1 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(30px, 35px); }
+}
+
+@keyframes magnetic-loop-2 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(-30px, 25px); }
+}
+
+@keyframes magnetic-loop-3 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(-35px, 0); }
+}
+
+@keyframes magnetic-loop-4 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(-30px, -25px); }
+}
+
+@keyframes magnetic-loop-5 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(15px, -30px); }
+}
+
+@keyframes magnetic-loop-6 {
+    0%, 25%, 100% { transform: translate(0, 0); }
+    55%, 75% { transform: translate(35px, 0); }
+}

@@ -241,48 +241,60 @@
                 </div>
 
                 <!-- Conceptual CSS Illustration (Right) -->
-                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center hero-illustration-wrapper" data-aos="zoom-in" data-aos-delay="200">
                     
                     <!-- Radial background glows -->
                     <div class="absolute w-64 h-64 rounded-full bg-primary/8 dark:bg-primary/5 blur-3xl pointer-events-none"></div>
                     <div class="absolute w-64 h-64 rounded-full bg-secondary/8 dark:bg-secondary/5 blur-3xl pointer-events-none translate-x-12 translate-y-12"></div>
                     
                     <!-- Center Gradix Card -->
-                    <div class="relative w-48 h-48 md:w-56 md:h-56 flex flex-col items-center justify-center p-6 transition-all duration-500 hover:scale-110 z-20 cursor-default select-none group">
+                    <div class="relative w-48 h-48 md:w-56 md:h-56 flex flex-col items-center justify-center p-6 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 shadow-xl rounded-3xl transition-all duration-500 hover:scale-110 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-primary/10 dark:hover:shadow-primary/20 z-20 cursor-default select-none group">
                         <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-12 md:h-14 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
                         <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-12 md:h-14 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
                     </div>
 
                     <!-- Orbiting Pill Tags -->
                     <!-- 1. Web Dev -->
-                    <div class="absolute top-[24%] left-[20%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-1">
-                        <i class="fa-solid fa-globe text-[#2563EB]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web Dev</span>
+                    <div class="absolute top-[24%] left-[20%] z-10 orbiting-pill pill-1">
+                        <div class="ani-float-1 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-globe text-[#2563EB]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web Dev</span>
+                        </div>
                     </div>
                     <!-- 2. UI / UX -->
-                    <div class="absolute top-[28%] right-[14%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-2">
-                        <i class="fa-solid fa-palette text-[#8B5CF6]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI / UX</span>
+                    <div class="absolute top-[28%] right-[14%] z-10 orbiting-pill pill-2">
+                        <div class="ani-float-2 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-palette text-[#8B5CF6]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI / UX</span>
+                        </div>
                     </div>
                     <!-- 3. Software -->
-                    <div class="absolute top-[48%] right-[12%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-3">
-                        <i class="fa-solid fa-code text-[#10B981]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
+                    <div class="absolute top-[48%] right-[12%] z-10 orbiting-pill pill-3">
+                        <div class="ani-float-3 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-code text-[#10B981]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
+                        </div>
                     </div>
                     <!-- 4. Apps -->
-                    <div class="absolute top-[68%] right-[18%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-4">
-                        <i class="fa-solid fa-mobile-screen text-[#F59E0B]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
+                    <div class="absolute top-[68%] right-[18%] z-10 orbiting-pill pill-4">
+                        <div class="ani-float-4 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-mobile-screen text-[#F59E0B]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
+                        </div>
                     </div>
                     <!-- 5. Marketing -->
-                    <div class="absolute bottom-[20%] left-[34%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-5">
-                        <i class="fa-solid fa-chart-line text-[#EC4899]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
+                    <div class="absolute bottom-[20%] left-[34%] z-10 orbiting-pill pill-5">
+                        <div class="ani-float-5 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-chart-line text-[#EC4899]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
+                        </div>
                     </div>
                     <!-- 6. Content -->
-                    <div class="absolute top-[50%] left-[18%] bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg z-10 select-none cursor-default ani-float-6">
-                        <i class="fa-solid fa-pen-nib text-[#06B6D4]"></i>
-                        <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
+                    <div class="absolute top-[50%] left-[18%] z-10 orbiting-pill pill-6">
+                        <div class="ani-float-6 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-4 py-2.5 rounded-2xl flex items-center gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                            <i class="fa-solid fa-pen-nib text-[#06B6D4]"></i>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
+                        </div>
                     </div>
 
                 </div>
@@ -414,6 +426,7 @@
                     <!-- 1. Web Development -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-code"></i>
                         </div>
@@ -426,6 +439,7 @@
                     <!-- 2. UI / UX Development -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-compass-drafting"></i>
                         </div>
@@ -438,6 +452,7 @@
                     <!-- 3. Software Development -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-laptop-code"></i>
                         </div>
@@ -450,6 +465,7 @@
                     <!-- 4. App Development -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-mobile-screen-button"></i>
                         </div>
@@ -462,6 +478,7 @@
                     <!-- 5. Content Creations -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-pen-nib"></i>
                         </div>
@@ -474,6 +491,7 @@
                     <!-- 6. Digital Marketing -->
                     <div class="why-card group">
                         <div class="why-card-inner"></div>
+                        <div class="why-card-fade"></div>
                         <div class="why-icon">
                             <i class="fa-solid fa-magnifying-glass-chart"></i>
                         </div>
@@ -616,19 +634,19 @@
                         
                         <!-- Stats Grid -->
                         <div class="grid grid-cols-2 gap-6">
-                            <div class="glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-105 transition-all duration-300">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-primary/25">
+                            <div class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-primary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-primary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1">20+</span>
+                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-primary">20+</span>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Completed Projects</span>
                             </div>
                             
-                            <div class="glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-105 transition-all duration-300">
-                                <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-secondary/25">
+                            <div class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-secondary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-secondary/5 dark:hover:shadow-secondary/10 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-secondary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     <i class="fa-solid fa-users"></i>
                                 </div>
-                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1">10+</span>
+                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-secondary">10+</span>
                                 <span class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Active Clients</span>
                             </div>
                         </div>
@@ -680,13 +698,13 @@
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
 
                     <div
-                        class="flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800">
+                        class="group flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800 hover:scale-[1.03] hover:border-primary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-300">
                         <div
-                            class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-rocket"></i>
                         </div>
                         <span
-                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2"
+                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2 transition-colors duration-300 group-hover:text-primary"
                             data-target="50" data-suffix="+">0+</span>
                         <span
                             class="text-sm font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Projects
@@ -694,13 +712,13 @@
                     </div>
 
                     <div
-                        class="flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800">
+                        class="group flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800 hover:scale-[1.03] hover:border-secondary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-secondary/5 dark:hover:shadow-secondary/10 transition-all duration-300">
                         <div
-                            class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            class="w-14 h-14 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-face-smile"></i>
                         </div>
                         <span
-                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2"
+                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2 transition-colors duration-300 group-hover:text-secondary"
                             data-target="20" data-suffix="+">0+</span>
                         <span
                             class="text-sm font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Happy
@@ -708,26 +726,26 @@
                     </div>
 
                     <div
-                        class="flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800">
+                        class="group flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800 hover:scale-[1.03] hover:border-accent/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-accent/5 dark:hover:shadow-accent/10 transition-all duration-300">
                         <div
-                            class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <span
-                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2"
+                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2 transition-colors duration-300 group-hover:text-accent"
                             data-target="15" data-suffix="+">0+</span>
                         <span
                             class="text-sm font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Technologies</span>
                     </div>
 
                     <div
-                        class="flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800">
+                        class="group flex flex-col items-center text-center p-6 glass-card rounded-2xl border border-borderLight/60 dark:border-slate-800 hover:scale-[1.03] hover:border-emerald-500/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-emerald-500/5 dark:hover:shadow-emerald-500/10 transition-all duration-300">
                         <div
-                            class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+                            class="w-14 h-14 bg-emerald-100 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                         <span
-                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2"
+                            class="stat-counter font-poppins font-black text-4xl md:text-5xl text-textHeading dark:text-white mb-2 transition-colors duration-300 group-hover:text-emerald-500"
                             data-target="99" data-suffix="%">0%</span>
                         <span
                             class="text-sm font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Client
@@ -753,83 +771,87 @@
                         What clients <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">say about us</span>
                     </h2>
                 </div>
+                <div class="relative max-w-3xl mx-auto px-4 md:px-16">
+                    <!-- Previous Button -->
+                    <button id="prev-testimonial"
+                        class="absolute left-2 md:-left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-md hover:scale-110 transition-all duration-300 z-30"
+                        aria-label="Previous Testimonial">
+                        <i class="fas fa-chevron-left text-sm"></i>
+                    </button>
 
-                <div class="white-catfish-slider relative">
-                    <div class="white-catfish-track">
+                    <!-- Slider Container -->
+                    <div class="white-catfish-slider relative overflow-hidden">
+                        <div class="white-catfish-track flex">
 
-                        <!-- Testimonial 1 -->
-                        <div class="white-catfish-slide">
-                            <div class="tidy-card">
-                                <div class="tidy-content">
-                                    <div class="tidy-header">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
-                                                PS
-                                            </div>
-                                            <div class="flex flex-col text-left">
-                                                <strong>Ms Prithika Sri</strong>
-                                                <p class="para">Director Nexyuga Innovations</p>
+                            <!-- Testimonial 1 -->
+                            <div class="white-catfish-slide flex justify-center w-full">
+                                <div class="tidy-card">
+                                    <div class="tidy-content">
+                                        <div class="tidy-header">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                    PS
+                                                </div>
+                                                <div class="flex flex-col text-left">
+                                                    <strong>Ms Prithika Sri</strong>
+                                                    <p class="para">Director Nexyuga Innovations</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="tidy-footer">
-                                        <svg viewBox="0 0 24 24" class="quotes text-primary dark:text-secondary fill-current">
-                                            <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
-                                        </svg>
-                                        <p class="para">
-                                            “What we expected was great, but Gradix delivered even better Their solutions exceeded our expectations and truly made a difference.”
-                                        </p>
+                                        <div class="tidy-footer">
+                                            <svg viewBox="0 0 24 24" class="quotes text-primary dark:text-secondary fill-current">
+                                                <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                            </svg>
+                                            <p class="para">
+                                                “What we expected was great, but Gradix delivered even better Their solutions exceeded our expectations and truly made a difference.”
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Testimonial 2 -->
-                        <div class="white-catfish-slide">
-                            <div class="tidy-card">
-                                <div class="tidy-content">
-                                    <div class="tidy-header">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
-                                                MV
-                                            </div>
-                                            <div class="flex flex-col text-left">
-                                                <strong>Mr Vishnu</strong>
-                                                <p class="para">Xiaomi Retails</p>
+                            <!-- Testimonial 2 -->
+                            <div class="white-catfish-slide flex justify-center w-full">
+                                <div class="tidy-card">
+                                    <div class="tidy-content">
+                                        <div class="tidy-header">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                    MV
+                                                </div>
+                                                <div class="flex flex-col text-left">
+                                                    <strong>Mr Vishnu</strong>
+                                                    <p class="para">Xiaomi Retails</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="tidy-footer">
-                                        <svg viewBox="0 0 24 24" class="quotes text-secondary dark:text-emerald-400 fill-current">
-                                            <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
-                                        </svg>
-                                        <p class="para">
-                                            “Working with the team exceeded our expectations Our software performs flawlessly boosts productivity ensures efficiency and makes daily operations effortless.”
-                                        </p>
+                                        <div class="tidy-footer">
+                                            <svg viewBox="0 0 24 24" class="quotes text-secondary dark:text-emerald-400 fill-current">
+                                                <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                            </svg>
+                                            <p class="para">
+                                                “Working with the team exceeded our expectations Our software performs flawlessly boosts productivity ensures efficiency and makes daily operations effortless.”
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                    </div>
 
-                    <div class="flex justify-center items-center gap-6 mt-8">
-                        <button id="prev-testimonial"
-                            class="w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-sm hover:scale-105 transition-all duration-300"
-                            aria-label="Previous Testimonial">
-                            <i class="fas fa-chevron-left text-sm"></i>
-                        </button>
-
-                        <!-- Testimonial Slider Navigation Dots -->
-                        <div id="testimonial-dots" class="flex gap-2.5 items-center justify-center">
-                            <button class="testimonial-dot hover:bg-primary/50 active-dot" data-slide="0" aria-label="Go to slide 1"></button>
-                            <button class="testimonial-dot hover:bg-primary/50" data-slide="1" aria-label="Go to slide 2"></button>
                         </div>
-
-                        <button id="next-testimonial"
-                            class="w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-sm hover:scale-105 transition-all duration-300"
-                            aria-label="Next Testimonial">
-                            <i class="fas fa-chevron-right text-sm"></i>
-                        </button>
                     </div>
+
+                    <!-- Next Button -->
+                    <button id="next-testimonial"
+                        class="absolute right-2 md:-right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-borderLight dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 flex items-center justify-center text-textHeading dark:text-white hover:bg-primary hover:text-white hover:border-primary shadow-md hover:scale-110 transition-all duration-300 z-30"
+                        aria-label="Next Testimonial">
+                        <i class="fas fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Testimonial Slider Navigation Dots -->
+                <div id="testimonial-dots" class="flex gap-2.5 items-center justify-center mt-8">
+                    <button class="testimonial-dot hover:bg-primary/50 active-dot" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="testimonial-dot hover:bg-primary/50" data-slide="1" aria-label="Go to slide 2"></button>
                 </div>
 
             </div>
