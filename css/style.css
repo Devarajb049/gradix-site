@@ -7,6 +7,7 @@
 
 :root {
     --primary: #2563EB;
+    --primary-dark: #1D4ED8;
     --secondary: #06B6D4;
     --accent: #F97316;
     --bg-primary: #FFFFFF;
@@ -17,7 +18,30 @@
 
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    /* Premium UI variables */
+    --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.04), 0 1px 2px 0 rgba(15, 23, 42, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
 }
+
+/* Shadow utility classes */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+/* Hover shadow utilities */
+.hover-shadow-lg:hover { box-shadow: var(--shadow-lg); }
+.hover-shadow-xl:hover { box-shadow: var(--shadow-xl); }
+.hover-shadow-2xl:hover { box-shadow: var(--shadow-2xl); }
+
+/* Transition utilities */
+.transition-all { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.transition-transform { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
+.transition-opacity { transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
 
 /* --- Base & Scroll System --- */
 * {
@@ -224,6 +248,9 @@ h6 {
     justify-content: center;
     gap: 8px;
     z-index: 10;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
 }
 
 .btn-young-newt::before {
