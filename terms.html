@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <link rel="icon" type="image/png" href="imgs/logo.png">
@@ -21,6 +21,15 @@
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Flicker-free Theme Loading Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 
     <!-- TailwindCSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -211,12 +220,29 @@
                     <img src="imgs/logo-dark.png" alt="Gradix Logo" class="h-8 w-auto block dark:hidden">
                     <img src="imgs/logo-light.png" alt="Gradix Logo" class="h-8 w-auto hidden dark:block">
                 </a>
-                <!-- Close Button -->
-                <button id="close-menu-btn"
-                    class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 focus:outline-none"
-                    aria-label="Close menu">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
+                <!-- Toggle & Close Wrapper -->
+                <div class="flex items-center gap-4">
+                    <!-- Theme Toggle Button -->
+                    <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
+                        <span class="dribbble-cloud dc-1"></span>
+                        <span class="dribbble-cloud dc-2"></span>
+                        <span class="dribbble-cloud dc-3"></span>
+                        <span class="dribbble-star ds-1"></span>
+                        <span class="dribbble-star ds-2"></span>
+                        <span class="dribbble-star ds-3"></span>
+                        <div class="dribbble-toggle-handle">
+                            <span class="dribbble-crater dcr-1"></span>
+                            <span class="dribbble-crater dcr-2"></span>
+                            <span class="dribbble-crater dcr-3"></span>
+                        </div>
+                    </button>
+                    <!-- Close Button -->
+                    <button id="close-menu-btn"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 focus:outline-none"
+                        aria-label="Close menu">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Drawer Links -->
