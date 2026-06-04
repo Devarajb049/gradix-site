@@ -2527,3 +2527,111 @@ body {
 .animate-text-glow {
     filter: none !important;
 }
+
+/* ==========================================================================
+   ABOUT PAGE — PREMIUM STATS BAR (Dark Theme)
+   ========================================================================== */
+
+.about-stats-dark-section {
+    background: #0d1526;
+    padding: 72px 0;
+}
+
+.about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .about-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .about-stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+}
+
+.about-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #141e33;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 40px 24px 32px;
+    gap: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    cursor: default;
+}
+
+.about-stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Icon wrapper */
+.about-stat-icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 4px;
+    transition: transform 0.28s ease;
+}
+
+.about-stat-card:hover .about-stat-icon-wrap {
+    transform: scale(1.12) rotate(-4deg);
+}
+
+/* Color variants — darkened for dark background */
+.about-stat-icon-blue {
+    background: rgba(109, 40, 217, 0.25);
+    color: #a78bfa;
+}
+
+.about-stat-icon-teal {
+    background: rgba(13, 148, 136, 0.25);
+    color: #2dd4bf;
+}
+
+.about-stat-icon-orange {
+    background: rgba(234, 88, 12, 0.25);
+    color: #fb923c;
+}
+
+.about-stat-icon-green {
+    background: rgba(22, 163, 74, 0.25);
+    color: #4ade80;
+}
+
+/* Big bold number */
+.about-stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+/* Uppercase label */
+.about-stat-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #64748b;
+}
