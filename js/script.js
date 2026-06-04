@@ -121,20 +121,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 6. MOBILE HAMBURGER MENU DRAWER
+    // 6. MOBILE & DESKTOP HAMBURGER MENU DRAWER
     // ==========================================
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-link');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    
+    // Dynamically inject backdrop overlay if missing
+    let backdrop = document.getElementById('mobile-nav-overlay');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'mobile-nav-backdrop';
+        backdrop.id = 'mobile-nav-overlay';
+        document.body.appendChild(backdrop);
+    }
 
     function toggleMobileMenu() {
-        hamburgerBtn.classList.toggle('active');
-        mobileNav.classList.toggle('open');
-        document.body.classList.toggle('overflow-hidden');
+        const isOpen = mobileNav.classList.contains('open');
+        if (isOpen) {
+            hamburgerBtn.classList.remove('active');
+            mobileNav.classList.remove('open');
+            backdrop.classList.remove('open');
+            document.body.classList.remove('overflow-hidden');
+        } else {
+            hamburgerBtn.classList.add('active');
+            mobileNav.classList.add('open');
+            backdrop.classList.add('open');
+            document.body.classList.add('overflow-hidden');
+        }
     }
 
     if (hamburgerBtn && mobileNav) {
         hamburgerBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (closeMenuBtn) {
+        closeMenuBtn.addEventListener('click', () => {
+            if (mobileNav.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        });
+    }
+
+    if (backdrop) {
+        backdrop.addEventListener('click', () => {
+            if (mobileNav.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        });
     }
 
     mobileLinks.forEach(link => {

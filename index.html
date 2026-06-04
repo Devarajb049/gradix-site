@@ -38,7 +38,7 @@
                         borderLight: '#E2E8F0',
                     },
                     fontFamily: {
-                        poppins: ['Outfit', 'sans-serif'],
+                        poppins: ['Clash Grotesk', 'Outfit', 'sans-serif'],
                         inter: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
@@ -77,136 +77,256 @@
         <!-- ==========================================
              1. NAVBAR (Sticky & Glassmorphism with Dark Toggle)
              ========================================== -->
-        <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-400 glass-navbar"
+        <header id="navbar" class="fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-400"
             data-aos="fade-down">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
 
-                <!-- Logo -->
-                <a href="index.html"
-                    class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
-                    <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-10 w-auto block dark:hidden">
-                    <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto hidden dark:block">
-                </a>
+            <!-- Row 1: Top Bar (Desktop Only) -->
+            <div class="header-top-bar hidden md:block w-full">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
+                    <!-- Tagline -->
+                    <span class="font-poppins font-medium tracking-wide">The Future in Software & Enterprise.
+                        Worldwide.</span>
+                    <!-- Social Media Links -->
+                    <div class="flex items-center gap-5">
+                        <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                            class="top-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="top-social-link"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/9488783430" target="_blank" class="top-social-link"
+                            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://x.com/gradix_tech" target="_blank" class="top-social-link"
+                            aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Navigation Links (Desktop) -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html" class="nav-link py-2 text-sm active-nav">Home</a>
-                    <a href="about.html" class="nav-link py-2 text-sm">About</a>
-                    <a href="services.html" class="nav-link py-2 text-sm">Services</a>
-                    <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
-                    <a href="contact.html" class="nav-link py-2 text-sm">Contact Us</a>
-                </nav>
+            <!-- Row 2: Info Bar (Desktop & Mobile view wrapper) -->
+            <div class="header-info-bar w-full h-[75px] md:h-[90px] flex items-center">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full flex items-center justify-between">
 
-                <!-- Action Button & Dark Mode Toggle (Desktop) -->
-                <div class="hidden md:flex items-center gap-6">
-                    <!-- Theme Toggle circular button -->
-                    <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
-                        <!-- Clouds in Light Mode -->
-                        <span class="dribbble-cloud dc-1"></span>
-                        <span class="dribbble-cloud dc-2"></span>
-                        <span class="dribbble-cloud dc-3"></span>
+                    <!-- Logo -->
+                    <a href="index.html"
+                        class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
+                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo"
+                            class="h-[34px] md:h-10 w-auto block dark:hidden">
+                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo"
+                            class="h-[34px] md:h-10 w-auto hidden dark:block">
+                    </a>
 
-                        <!-- Stars in Dark Mode -->
-                        <span class="dribbble-star ds-1"></span>
-                        <span class="dribbble-star ds-2"></span>
-                        <span class="dribbble-star ds-3"></span>
-
-                        <!-- Sun/Moon Handle -->
-                        <div class="dribbble-toggle-handle">
-                            <!-- Craters on the Moon -->
-                            <span class="dribbble-crater dcr-1"></span>
-                            <span class="dribbble-crater dcr-2"></span>
-                            <span class="dribbble-crater dcr-3"></span>
-                        </div>
-                    </button>
-
-                    <a href="contact.html" class="btn-smart-moth">
-                        <div class="svg-wrapper-1">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="fill-current">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                </svg>
+                    <!-- Contact Details (Desktop Only) -->
+                    <div class="hidden md:flex items-center gap-10">
+                        <!-- Phone Number -->
+                        <div class="header-contact-card">
+                            <div class="header-contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="header-contact-text">
+                                <span class="header-contact-label">Phone Number</span>
+                                <a href="tel:+919488783430" class="header-contact-value">+91 94887 83430</a>
                             </div>
                         </div>
-                        <span>Get Started</span>
-                    </a>
-                </div>
+                        <!-- Email Card -->
+                        <div class="header-contact-card">
+                            <div class="header-contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="header-contact-text">
+                                <span class="header-contact-label">Email Us Here</span>
+                                <a href="mailto:gradixtechnologies@gmail.com"
+                                    class="header-contact-value">gradixtechnologies@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Hamburger Button & Theme Toggle (Mobile) -->
-                <div class="md:hidden flex items-center gap-4 z-50">
+                    <!-- Hamburger Menu Trigger (Mobile Only) -->
+                    <button id="hamburger-btn"
+                        class="md:hidden flex flex-col justify-between w-6 h-[17px] focus:outline-none focus:ring-2 focus:ring-primary/20 rounded group"
+                        aria-label="Toggle Navigation Menu">
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 bg-textHeading dark:bg-white"></span>
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Row 3: Nav Bar (Desktop Only) -->
+            <div class="header-nav-bar hidden md:flex w-full items-center">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full flex items-center justify-between">
+
+                    <!-- Navigation Links -->
+                    <nav class="flex items-center gap-7">
+                        <a href="index.html" class="nav-link py-2 text-sm">Home</a>
+                        <a href="about.html" class="nav-link py-2 text-sm">About</a>
+                        <a href="services.html" class="nav-link py-2 text-sm">Services</a>
+                        <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
+                        <a href="contact.html" class="nav-link py-2 text-sm">Contact</a>
+                    </nav>
+
+                    <!-- Theme Toggle & Request Quote Button -->
+                    <div class="flex items-center gap-6">
+                        <!-- Theme Toggle Button -->
+                        <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
+                            <span class="dribbble-cloud dc-1"></span>
+                            <span class="dribbble-cloud dc-2"></span>
+                            <span class="dribbble-cloud dc-3"></span>
+                            <span class="dribbble-star ds-1"></span>
+                            <span class="dribbble-star ds-2"></span>
+                            <span class="dribbble-star ds-3"></span>
+                            <div class="dribbble-toggle-handle">
+                                <span class="dribbble-crater dcr-1"></span>
+                                <span class="dribbble-crater dcr-2"></span>
+                                <span class="dribbble-crater dcr-3"></span>
+                            </div>
+                        </button>
+
+                        <!-- Request a Quote -->
+                        <a href="contact.html" class="btn-smart-moth">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                        class="fill-current">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Request A Quote</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Mobile Drawer Navigation Panel -->
+        <div id="mobile-nav" class="mobile-nav-panel flex flex-col justify-between">
+
+            <!-- Drawer Header -->
+            <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
+                <!-- Logo -->
+                <a href="index.html">
+                    <img src="imgs/logo-dark.png" alt="Gradix Logo" class="h-8 w-auto block dark:hidden">
+                    <img src="imgs/logo-light.png" alt="Gradix Logo" class="h-8 w-auto hidden dark:block">
+                </a>
+                <!-- Toggle & Close Wrapper -->
+                <div class="flex items-center gap-4">
+                    <!-- Theme Toggle Button -->
                     <button class="theme-toggle-btn focus:outline-none" aria-label="Toggle Theme Mode">
-                        <!-- Clouds in Light Mode -->
                         <span class="dribbble-cloud dc-1"></span>
                         <span class="dribbble-cloud dc-2"></span>
                         <span class="dribbble-cloud dc-3"></span>
-
-                        <!-- Stars in Dark Mode -->
                         <span class="dribbble-star ds-1"></span>
                         <span class="dribbble-star ds-2"></span>
                         <span class="dribbble-star ds-3"></span>
-
-                        <!-- Sun/Moon Handle -->
                         <div class="dribbble-toggle-handle">
-                            <!-- Craters on the Moon -->
                             <span class="dribbble-crater dcr-1"></span>
                             <span class="dribbble-crater dcr-2"></span>
                             <span class="dribbble-crater dcr-3"></span>
                         </div>
                     </button>
-
-                    <button id="hamburger-btn"
-                        class="flex flex-col justify-between w-6 h-5 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded p-1 group"
-                        aria-label="Toggle Navigation Menu">
-                        <span
-                            class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300 origin-left"></span>
-                        <span
-                            class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300"></span>
-                        <span
-                            class="w-full h-[2.5px] bg-textHeading dark:bg-white rounded transition-all duration-300 origin-left"></span>
+                    <!-- Close Button -->
+                    <button id="close-menu-btn"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 focus:outline-none"
+                        aria-label="Close menu">
+                        <i class="fa-solid fa-xmark text-lg"></i>
                     </button>
                 </div>
             </div>
-        </header>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobile-nav" class="mobile-nav-panel flex flex-col justify-between p-8">
-            <div class="flex flex-col gap-6 mt-8">
+            <!-- Drawer Links -->
+            <div class="flex flex-col gap-3 py-6 overflow-y-auto grow">
                 <a href="index.html"
-                    class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
                         class="fas fa-home mr-3 text-primary"></i>Home</a>
                 <a href="about.html"
-                    class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
                         class="fas fa-user-group mr-3 text-primary"></i>About</a>
                 <a href="services.html"
-                    class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
                         class="fas fa-gear mr-3 text-primary"></i>Services</a>
                 <a href="projects.html"
-                    class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
                         class="fas fa-folder-open mr-3 text-primary"></i>Projects</a>
                 <a href="contact.html"
-                    class="mobile-link text-xl font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
-                        class="fas fa-envelope mr-3 text-primary"></i>Contact Us</a>
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
             </div>
-            <div>
-                <a href="contact.html" class="btn-smart-moth w-full justify-center">
+
+            <!-- Drawer Footer Contact and Action Info -->
+            <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-6">
+                <!-- Circular Contact Info blocks -->
+                <div class="flex flex-col gap-4">
+                    <!-- Phone Number -->
+                    <div class="header-contact-card">
+                        <div class="header-contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="header-contact-text">
+                            <span class="header-contact-label">Phone Number</span>
+                            <a href="tel:+919488783430" class="header-contact-value">+91 94887 83430</a>
+                        </div>
+                    </div>
+                    <!-- Email address -->
+                    <div class="header-contact-card">
+                        <div class="header-contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="header-contact-text">
+                            <span class="header-contact-label">Email Us Here</span>
+                            <a href="mailto:gradixtechnologies@gmail.com"
+                                class="header-contact-value text-xs sm:text-sm md:text-base break-all">gradixtechnologies@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yellow CTA button -->
+                <a href="contact.html" class="btn-smart-moth">
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="fill-current">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                class="fill-current">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                <path
+                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                </path>
                             </svg>
                         </div>
                     </div>
-                    <span>Get Started</span>
+                    <span>Request A Quote</span>
                 </a>
+
+                <!-- Social Links -->
+                <div
+                    class="flex items-center justify-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/60">
+                    <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    <a href="https://www.instagram.com/gradix_technologies/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="https://wa.me/9488783430" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    <a href="https://x.com/gradix_tech" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                </div>
             </div>
+
         </div>
 
         <!-- ==========================================
              2. HERO SECTION
              ========================================== -->
-        <section id="home-hero" class="min-h-screen flex items-center pt-24 pb-12 relative z-10 px-6 lg:px-8 border-b border-slate-100 dark:border-slate-900/50">
+        <section id="home-hero"
+            class="min-h-screen flex items-center pt-24 pb-12 relative z-10 px-6 lg:px-8 border-b border-slate-100 dark:border-slate-900/50">
             <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 <!-- Hero Content (Left) -->
@@ -221,12 +341,14 @@
                     <h1
                         class="text-4xl md:text-5xl lg:text-6xl font-black font-poppins leading-[1.1] text-textHeading dark:text-white">
                         Accelerate Your Business Growth with <span
-                            class="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">Gradix Technologies</span>
+                            class="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">Gradix
+                            Technologies</span>
                     </h1>
 
                     <!-- Subheading -->
                     <p class="text-lg text-textBody dark:text-slate-400 leading-relaxed max-w-xl">
-                        Gradix Technologies helps startups and businesses grow through reliable digital solutions, modern design, and performance-focused strategies.
+                        Gradix Technologies helps startups and businesses grow through reliable digital solutions,
+                        modern design, and performance-focused strategies.
                     </p>
 
                     <!-- Action Buttons -->
@@ -241,59 +363,79 @@
                 </div>
 
                 <!-- Conceptual CSS Illustration (Right) -->
-                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center hero-illustration-wrapper" data-aos="zoom-in" data-aos-delay="200">
-                    
+                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center hero-illustration-wrapper"
+                    data-aos="zoom-in" data-aos-delay="200">
+
                     <!-- Radial background glows -->
-                    <div class="absolute w-64 h-64 rounded-full bg-primary/8 dark:bg-primary/5 blur-3xl pointer-events-none"></div>
-                    <div class="absolute w-64 h-64 rounded-full bg-secondary/8 dark:bg-secondary/5 blur-3xl pointer-events-none translate-x-12 translate-y-12"></div>
-                    
+                    <div
+                        class="absolute w-64 h-64 rounded-full bg-primary/8 dark:bg-primary/5 blur-3xl pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute w-64 h-64 rounded-full bg-secondary/8 dark:bg-secondary/5 blur-3xl pointer-events-none translate-x-12 translate-y-12">
+                    </div>
+
                     <!-- Center Gradix Card -->
-                    <div class="relative w-40 h-40 md:w-56 md:h-56 flex flex-col items-center justify-center p-4 md:p-6 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 shadow-xl rounded-3xl transition-all duration-500 hover:scale-110 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-primary/10 dark:hover:shadow-primary/20 z-20 cursor-default select-none group">
-                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-9 md:h-14 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
-                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-9 md:h-14 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="relative w-40 h-40 md:w-56 md:h-56 flex flex-col items-center justify-center p-4 md:p-6 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 shadow-xl rounded-3xl transition-all duration-500 hover:scale-110 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-primary/10 dark:hover:shadow-primary/20 z-20 cursor-default select-none group">
+                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo"
+                            class="h-9 md:h-14 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
+                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo"
+                            class="h-9 md:h-14 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
                     </div>
 
                     <!-- Orbiting Pill Tags -->
                     <!-- 1. Web Dev -->
                     <div class="absolute top-[24%] left-[4%] md:left-[20%] z-10 orbiting-pill pill-1">
-                        <div class="ani-float-1 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-1 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-globe text-[#2563EB]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web Dev</span>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web
+                                Dev</span>
                         </div>
                     </div>
                     <!-- 2. UI / UX -->
                     <div class="absolute top-[28%] right-[2%] md:right-[14%] z-10 orbiting-pill pill-2">
-                        <div class="ani-float-2 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-2 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-palette text-[#8B5CF6]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI / UX</span>
+                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI /
+                                UX</span>
                         </div>
                     </div>
                     <!-- 3. Software -->
                     <div class="absolute top-[48%] right-[0%] md:right-[12%] z-10 orbiting-pill pill-3">
-                        <div class="ani-float-3 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-3 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-code text-[#10B981]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
+                            <span
+                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
                         </div>
                     </div>
                     <!-- 4. Apps -->
                     <div class="absolute top-[68%] right-[4%] md:right-[18%] z-10 orbiting-pill pill-4">
-                        <div class="ani-float-4 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-4 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-mobile-screen text-[#F59E0B]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
+                            <span
+                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
                         </div>
                     </div>
                     <!-- 5. Marketing -->
                     <div class="absolute bottom-[20%] left-[25%] md:left-[34%] z-10 orbiting-pill pill-5">
-                        <div class="ani-float-5 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-5 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-chart-line text-[#EC4899]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
+                            <span
+                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
                         </div>
                     </div>
                     <!-- 6. Content -->
                     <div class="absolute top-[50%] left-[2%] md:left-[18%] z-10 orbiting-pill pill-6">
-                        <div class="ani-float-6 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
+                        <div
+                            class="ani-float-6 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
                             <i class="fa-solid fa-pen-nib text-[#06B6D4]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
+                            <span
+                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
                         </div>
                     </div>
 
@@ -303,102 +445,279 @@
         </section>
 
         <!-- ==========================================
+             2B. PREMIUM DIAGONAL RIBBONS (Marquee Ticker)
+             ========================================== -->
+        <section id="capabilities-ticker"
+            class="relative w-full overflow-hidden bg-white dark:bg-slate-950 py-0 z-20 flex flex-col justify-center border-y border-slate-100 dark:border-slate-900/50">
+            <!-- Ambient Background Glows -->
+            <div
+                class="ribbon-glow bg-primary/20 dark:bg-primary/15 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            </div>
+
+            <!-- Ribbon (Scrolling Left to Right) -->
+            <div
+                class="relative w-[108vw] -left-[4vw] overflow-hidden py-3 md:py-4 bg-gradient-to-r from-secondary/90 via-primary/90 to-secondary/90 backdrop-blur-lg border border-white/20 rounded-full shadow-[0_8px_30px_rgba(6,182,212,0.25)] z-20 marquee-container cursor-pointer select-none">
+                <div class="marquee-track-right flex gap-4 md:gap-6 items-center">
+                    <!-- Block 1 -->
+                    <div class="flex items-center gap-4 md:gap-6 shrink-0">
+                        <!-- Set 1 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+
+                        <!-- Set 2 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+
+                        <!-- Set 3 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                    </div>
+                    <!-- Block 2 (Duplicate) -->
+                    <div class="flex items-center gap-4 md:gap-6 shrink-0" aria-hidden="true">
+                        <!-- Set 1 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+
+                        <!-- Set 2 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+
+                        <!-- Set 3 -->
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-code mr-2"></i>Web
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-palette mr-2"></i>UI/UX
+                            Design</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-laptop-code mr-2"></i>Software
+                            Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-mobile-screen-button mr-2"></i>Mobile
+                            App Development</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-pen-nib mr-2"></i>Content
+                            Creation</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                        <span
+                            class="ribbon-text-item text-xs sm:text-sm md:text-lg font-poppins font-bold bg-white/10 dark:bg-slate-900/30 px-4 py-2 rounded-full border border-white/15 backdrop-blur-sm shadow-sm"><i
+                                class="fa-solid fa-magnifying-glass-chart mr-2"></i>Digital
+                            Marketing</span>
+                        <span class="text-blue-300 animate-text-glow select-none text-sm md:text-base">★</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
              3. ABOUT SUMMARY
+
              ========================================== -->
         <section id="home-about"
-            class="py-24 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900">
+            class="py-24 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900 bg-slate-50/50 dark:bg-slate-900/10">
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                <!-- Left: Large Modern Image -->
-                <div class="relative w-full flex justify-center items-center" data-aos="fade-right">
-                    <div class="relative w-full max-w-[480px] group">
+                <!-- Left: Content summary -->
+                <div class="flex flex-col space-y-6" data-aos="fade-right">
+                    <div class="flex flex-col space-y-3">
+                        <span class="text-primary font-poppins font-bold text-xs uppercase tracking-widest">Our
+                            Expertise</span>
+                        <h2
+                            class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white leading-[1.15]">
+                            Turn your ideas<br>into a <span
+                                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Startup</span>
+                        </h2>
+                    </div>
+
+                    <p class="text-base md:text-lg text-textBody dark:text-slate-400 leading-relaxed max-w-xl">
+                        At Gradix Technologies, we help businesses turn their ideas into reliable digital solutions. We
+                        design, build, and optimize custom software, websites, and mobile applications tailored to your
+                        growth.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap items-center gap-6 pt-4">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center bg-primary hover:bg-primary/95 text-white font-poppins font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5">
+                            Work With Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Large Leaf-Shaped Image -->
+                <div class="relative w-full flex justify-center items-center" data-aos="fade-left">
+                    <div class="relative w-full max-w-[480px] md:max-w-[520px] group">
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000">
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-tl-[32px] rounded-tr-[180px] rounded-bl-[180px] rounded-br-[32px] blur opacity-20 group-hover:opacity-35 transition duration-1000">
                         </div>
                         <img src="imgs/about-visual.png"
                             alt="Collaborative Enterprise Software Development Workflow Illustration"
-                            class="rounded-3xl w-full h-auto object-cover relative z-10 border border-white/40 dark:border-slate-800 shadow-2xl select-none">
+                            class="w-full h-auto object-cover relative z-10 border border-white/40 dark:border-slate-800 shadow-2xl select-none rounded-tl-[32px] rounded-tr-[180px] rounded-bl-[180px] rounded-br-[32px]">
 
-                        <div class="absolute -bottom-8 -right-4 md:-right-8 z-20 glass-card p-6 rounded-2xl flex items-center gap-4 shadow-xl border border-white/60 dark:border-slate-800 animate-bounce"
+                        <!-- Floating Projects Badge -->
+                        <div class="absolute -bottom-6 -left-6 z-20 glass-card p-4 md:p-5 rounded-2xl flex items-center gap-4 shadow-xl border border-white/60 dark:border-slate-800 animate-bounce"
                             style="animation-duration: 5s;">
                             <div
-                                class="w-14 h-14 bg-gradient-to-tr from-primary to-secondary rounded-xl flex items-center justify-center text-white text-2xl font-bold font-poppins shadow-md">
+                                class="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-tr from-primary to-secondary rounded-xl flex items-center justify-center text-white text-xl md:text-2xl font-bold font-poppins shadow-md shrink-0">
                                 20+
                             </div>
                             <div class="flex flex-col text-left">
                                 <span
-                                    class="font-poppins font-bold text-textHeading dark:text-white text-base leading-tight">Projects</span>
+                                    class="font-poppins font-bold text-textHeading dark:text-white text-sm md:text-base leading-tight">Projects</span>
                                 <span
-                                    class="text-xs text-textBody dark:text-slate-400 uppercase tracking-wider font-semibold leading-tight">Successfully Delivered</span>
+                                    class="text-[10px] md:text-xs text-textBody dark:text-slate-400 uppercase tracking-wider font-semibold leading-tight">Successfully
+                                    Delivered</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Right: Content summary -->
-                <div class="flex flex-col space-y-8" data-aos="fade-left">
-                    <div class="flex flex-col space-y-3">
-                        <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our Expertise</span>
-                        <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
-                            End-to-End Digital Solutions
-                        </h2>
-                    </div>
-
-                    <p class="text-textBody dark:text-slate-400 text-base leading-relaxed">
-                        At Gradix Technologies, we design and deliver practical digital solutions focused on real
-                        business needs. Our approach combines strategy, technology, and performance to help brands grow
-                        sustainably in a competitive digital space.
-                    </p>
-                    
-                    <blockquote class="text-textBody dark:text-slate-400 text-sm leading-relaxed italic border-l-2 border-primary/60 pl-4 py-1">
-                        We have delivered web, mobile, and software solutions across multiple industries, focusing on performance, usability, and long-term scalability.
-                    </blockquote>
-
-                    <!-- What We Do Best -->
-                    <div class="flex flex-col space-y-4 pt-2">
-                        <span class="font-poppins font-bold text-xs uppercase tracking-wider text-slate-400 dark:text-slate-500">What We Do Best</span>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex items-center gap-3 group">
-                                <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm group-hover:scale-110 transition-all duration-300 dark:bg-primary/25">
-                                    <i class="fa-solid fa-code"></i>
-                                </span>
-                                <span class="font-semibold text-textHeading dark:text-white text-sm">Web & Application Development</span>
-                            </div>
-                            
-                            <div class="flex items-center gap-3 group">
-                                <span class="w-8 h-8 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center text-sm group-hover:scale-110 transition-all duration-300 dark:bg-secondary/25">
-                                    <i class="fa-solid fa-cubes"></i>
-                                </span>
-                                <span class="font-semibold text-textHeading dark:text-white text-sm">Software Solutions</span>
-                            </div>
-                            
-                            <div class="flex items-center gap-3 group">
-                                <span class="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-sm group-hover:scale-110 transition-all duration-300 dark:bg-accent/25">
-                                    <i class="fa-solid fa-compass-drafting"></i>
-                                </span>
-                                <span class="font-semibold text-textHeading dark:text-white text-sm">UI / UX & Product Design</span>
-                            </div>
-                            
-                            <div class="flex items-center gap-3 group">
-                                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm group-hover:scale-110 transition-all duration-300 dark:bg-emerald-500/25">
-                                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-                                </span>
-                                <span class="font-semibold text-textHeading dark:text-white text-sm">Digital Marketing</span>
-                            </div>
-                            
-                            <div class="flex items-center gap-3 sm:col-span-2 group">
-                                <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm group-hover:scale-110 transition-all duration-300 dark:bg-amber-500/25">
-                                    <i class="fa-solid fa-gauge-high"></i>
-                                </span>
-                                <span class="font-semibold text-textHeading dark:text-white text-sm">Performance Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-4 pt-2">
-                        <a href="about.html" class="btn-young-newt text-sm font-semibold">
-                            Read Our Story <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -413,8 +732,10 @@
             <div class="max-w-7xl mx-auto">
 
                 <div class="flex flex-col items-center text-center space-y-4 mb-16" data-aos="fade-up">
-                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our Services</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
+                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our
+                        Services</span>
+                    <h2
+                        class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
                         Customizable Digital Solutions for your Growth
                     </h2>
                 </div>
@@ -431,7 +752,8 @@
                         </div>
                         <h3>Web Development</h3>
                         <p>
-                            Building websites that combine sleek design with robust functionality. Helping businesses connect, engage, and grow online.
+                            Building websites that combine sleek design with robust functionality. Helping businesses
+                            connect, engage, and grow online.
                         </p>
                     </div>
 
@@ -444,7 +766,8 @@
                         </div>
                         <h3>UI / UX Development</h3>
                         <p>
-                            We design intuitive and engaging user interfaces that provide seamless experiences. Our Design turn complex ideas into user-friendly digital journeys.
+                            We design intuitive and engaging user interfaces that provide seamless experiences. Our
+                            Design turn complex ideas into user-friendly digital journeys.
                         </p>
                     </div>
 
@@ -457,7 +780,8 @@
                         </div>
                         <h3>Software Development</h3>
                         <p>
-                            Building software that adapts to your needs. Reliable, innovative, and optimized for seamless performance and scalability.
+                            Building software that adapts to your needs. Reliable, innovative, and optimized for
+                            seamless performance and scalability.
                         </p>
                     </div>
 
@@ -470,7 +794,8 @@
                         </div>
                         <h3>App Development</h3>
                         <p>
-                            Apps that captivate inspire and deliver results engage instantly Transforming concepts into mobile solutions that scale and perform inspire growth.
+                            Apps that captivate inspire and deliver results engage instantly Transforming concepts into
+                            mobile solutions that scale and perform inspire growth.
                         </p>
                     </div>
 
@@ -483,7 +808,8 @@
                         </div>
                         <h3>Content Creations</h3>
                         <p>
-                            Content that tells your story engages your audience and builds trust Transforming ideas into powerful experiences that create results.
+                            Content that tells your story engages your audience and builds trust Transforming ideas into
+                            powerful experiences that create results.
                         </p>
                     </div>
 
@@ -496,17 +822,21 @@
                         </div>
                         <h3>Digital Marketing</h3>
                         <p>
-                            Digital marketing that connects engages and converts drive growth Creating campaigns that grow your brand inspire action and deliver impact boost visibility.
+                            Digital marketing that connects engages and converts drive growth Creating campaigns that
+                            grow your brand inspire action and deliver impact boost visibility.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- Custom Free Strategy Call CTA Banner -->
-                <div class="mt-16 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-primary/10 via-secondary/10 to-transparent border border-primary/20 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="mt-16 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-primary/10 via-secondary/10 to-transparent border border-primary/20 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex flex-col space-y-2 text-left">
-                        <h4 class="font-poppins font-bold text-xl md:text-2xl text-textHeading dark:text-white">Need a custom solution?</h4>
-                        <p class="text-sm text-textBody dark:text-slate-400 max-w-xl">Let’s plan and build the right solution for your business.</p>
+                        <h4 class="font-poppins font-bold text-xl md:text-2xl text-textHeading dark:text-white">Need a
+                            custom solution?</h4>
+                        <p class="text-sm text-textBody dark:text-slate-400 max-w-xl">Let’s plan and build the right
+                            solution for your business.</p>
                     </div>
                     <a href="contact.html" class="btn-young-newt py-4 px-8 text-sm font-semibold whitespace-nowrap">
                         Get a Free Strategy Call <i class="fas fa-phone-flip text-xs ml-2"></i>
@@ -520,85 +850,121 @@
         <!-- ==========================================
              4B. OUR PROVEN DIGITAL PROCESS (How We Work)
              ========================================== -->
-        <section id="home-process" class="py-24 bg-white dark:bg-slate-950 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900">
+        <section id="home-process"
+            class="py-24 bg-white dark:bg-slate-950 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900">
             <div class="max-w-7xl mx-auto">
-                
+
                 <div class="flex flex-col items-center text-center space-y-4 mb-20" data-aos="fade-up">
-                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">How We Work</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
+                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">How We
+                        Work</span>
+                    <h2
+                        class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
                         Our Proven Digital Process
                     </h2>
                     <p class="text-textBody dark:text-slate-400 text-base max-w-2xl leading-relaxed mt-2">
-                        At Gradix Technologies, we follow a structured and practical approach to transform ideas into reliable digital solutions. Our process ensures clarity, efficiency, and scalable growth for your business.
+                        At Gradix Technologies, we follow a structured and practical approach to transform ideas into
+                        reliable digital solutions. Our process ensures clarity, efficiency, and scalable growth for
+                        your business.
                     </p>
                 </div>
 
                 <!-- Process Steps Grid with connecting line effect -->
-                <div class="relative grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 z-10" data-aos="fade-up" data-aos-delay="100">
-                    
+                <div class="relative grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 z-10" data-aos="fade-up"
+                    data-aos-delay="100">
+
                     <!-- Decorative timeline line on desktop/large viewports -->
-                    <div class="hidden lg:block absolute top-[40px] left-[12%] right-[12%] h-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
-                        <div id="timeline-progress-filler" class="h-full w-0 bg-gradient-to-r from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out"></div>
+                    <div
+                        class="hidden lg:block absolute top-[40px] left-[12%] right-[12%] h-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
+                        <div id="timeline-progress-filler"
+                            class="h-full w-0 bg-gradient-to-r from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out">
+                        </div>
                     </div>
 
                     <!-- Decorative timeline line on mobile/tablet viewports -->
-                    <div class="block lg:hidden absolute top-[40px] bottom-[40px] left-[40px] -translate-x-1/2 w-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
-                        <div id="timeline-progress-filler-mobile" class="w-full h-0 bg-gradient-to-b from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out"></div>
+                    <div
+                        class="block lg:hidden absolute top-[40px] bottom-[40px] left-[40px] -translate-x-1/2 w-[4px] bg-slate-100 dark:bg-slate-800 z-[-1] rounded-full overflow-hidden">
+                        <div id="timeline-progress-filler-mobile"
+                            class="w-full h-0 bg-gradient-to-b from-primary via-secondary to-emerald-500 transition-all duration-700 ease-out">
+                        </div>
                     </div>
 
                     <!-- Step 1: Discovery & Consultation -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="0">
-                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-lg transition-all duration-500 dark:bg-primary/25 mb-0 lg:mb-6 shrink-0">
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="0">
+                        <div
+                            class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-lg transition-all duration-500 dark:bg-primary/25 mb-0 lg:mb-6 shrink-0">
                             <!-- Step Number badge -->
-                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">01</span>
+                            <span
+                                class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">01</span>
                             <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                         </div>
                         <div class="flex flex-col text-left lg:text-center">
-                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Discovery & Consultation</h3>
+                            <h3
+                                class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">
+                                Discovery & Consultation</h3>
                             <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
-                                We understand your business goals, challenges, and requirements to ensure the right solution is planned from the beginning.
+                                We understand your business goals, challenges, and requirements to ensure the right
+                                solution is planned from the beginning.
                             </p>
                         </div>
                     </div>
 
                     <!-- Step 2: Strategy & Planning -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="1">
-                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10 text-secondary border border-secondary/20 shadow-lg transition-all duration-500 dark:bg-secondary/25 mb-0 lg:mb-6 shrink-0">
-                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-secondary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">02</span>
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="1">
+                        <div
+                            class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10 text-secondary border border-secondary/20 shadow-lg transition-all duration-500 dark:bg-secondary/25 mb-0 lg:mb-6 shrink-0">
+                            <span
+                                class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-secondary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">02</span>
                             <i class="fa-solid fa-chess-knight text-2xl"></i>
                         </div>
                         <div class="flex flex-col text-left lg:text-center">
-                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Strategy & Planning</h3>
+                            <h3
+                                class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">
+                                Strategy & Planning</h3>
                             <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
-                                We design a clear roadmap including architecture, features, timelines, and technology choices for smooth execution.
+                                We design a clear roadmap including architecture, features, timelines, and technology
+                                choices for smooth execution.
                             </p>
                         </div>
                     </div>
 
                     <!-- Step 3: Development & Execution -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="2">
-                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 text-accent border border-accent/20 shadow-lg transition-all duration-500 dark:bg-accent/25 mb-0 lg:mb-6 shrink-0">
-                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-accent text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">03</span>
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="2">
+                        <div
+                            class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 text-accent border border-accent/20 shadow-lg transition-all duration-500 dark:bg-accent/25 mb-0 lg:mb-6 shrink-0">
+                            <span
+                                class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-accent text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">03</span>
                             <i class="fa-solid fa-laptop-code text-2xl"></i>
                         </div>
                         <div class="flex flex-col text-left lg:text-center">
-                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Development & Execution</h3>
+                            <h3
+                                class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">
+                                Development & Execution</h3>
                             <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
-                                Our team builds and implements your solution using modern technologies with a strong focus on performance and security.
+                                Our team builds and implements your solution using modern technologies with a strong
+                                focus on performance and security.
                             </p>
                         </div>
                     </div>
 
                     <!-- Step 4: Launch, Support & Growth -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0" data-step="3">
-                        <div class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-lg transition-all duration-500 dark:bg-emerald-500/25 mb-0 lg:mb-6 shrink-0">
-                            <span class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">04</span>
+                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="3">
+                        <div
+                            class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-lg transition-all duration-500 dark:bg-emerald-500/25 mb-0 lg:mb-6 shrink-0">
+                            <span
+                                class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-emerald-500 text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">04</span>
                             <i class="fa-solid fa-chart-line text-2xl"></i>
                         </div>
                         <div class="flex flex-col text-left lg:text-center">
-                            <h3 class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">Launch, Support & Growth</h3>
+                            <h3
+                                class="timeline-title font-poppins font-bold text-lg text-textHeading dark:text-white mb-2 lg:mb-3 transition-colors duration-500">
+                                Launch, Support & Growth</h3>
                             <p class="text-xs text-textBody dark:text-slate-400 leading-relaxed max-w-xs">
-                                After launch, we provide continuous support, improvements, and optimizations to help your business scale confidently.
+                                After launch, we provide continuous support, improvements, and optimizations to help
+                                your business scale confidently.
                             </p>
                         </div>
                     </div>
@@ -621,44 +987,62 @@
         <section id="home-why" class="py-24 relative z-10 px-6 lg:px-8 bg-white dark:bg-slate-950">
             <div class="max-w-7xl mx-auto">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    
+
                     <!-- Left: Trusted by Growing Businesses -->
                     <div class="flex flex-col space-y-8" data-aos="fade-right">
                         <div class="flex flex-col space-y-3">
-                            <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Trusted by Growing Businesses</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
+                            <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Trusted
+                                by Growing Businesses</span>
+                            <h2
+                                class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
                                 Our Track Record
                             </h2>
                         </div>
-                        
+
                         <!-- Stats Grid -->
                         <div class="grid grid-cols-2 gap-6">
-                            <div class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-primary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-300">
-                                <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-primary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            <div
+                                class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-primary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-300">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-primary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </div>
-                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-primary">20+</span>
-                                <span class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Completed Projects</span>
+                                <span
+                                    class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-primary">20+</span>
+                                <span
+                                    class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Completed
+                                    Projects</span>
                             </div>
-                            
-                            <div class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-secondary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-secondary/5 dark:hover:shadow-secondary/10 transition-all duration-300">
-                                <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-secondary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+
+                            <div
+                                class="group glass-card p-6 rounded-2xl border border-borderLight dark:border-slate-800 text-center lg:text-left hover:scale-[1.03] hover:border-secondary/40 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-secondary/5 dark:hover:shadow-secondary/10 transition-all duration-300">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 text-xl mx-auto lg:mx-0 dark:bg-secondary/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     <i class="fa-solid fa-users"></i>
                                 </div>
-                                <span class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-secondary">10+</span>
-                                <span class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Active Clients</span>
+                                <span
+                                    class="font-poppins font-black text-4xl text-textHeading dark:text-white block mb-1 transition-colors duration-300 group-hover:text-secondary">10+</span>
+                                <span
+                                    class="text-xs font-semibold uppercase tracking-wider text-textBody dark:text-slate-400">Active
+                                    Clients</span>
                             </div>
                         </div>
 
                         <!-- Focus Areas Badges -->
                         <div class="flex flex-col space-y-3">
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Core Focus Areas</span>
+                            <span
+                                class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Core
+                                Focus Areas</span>
                             <div class="flex flex-wrap gap-3">
-                                <span class="inline-flex items-center gap-2 py-2 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 dark:bg-slate-900/60 dark:border-slate-800 dark:text-slate-300 font-semibold text-xs transition-colors hover:border-primary/40">
-                                    <i class="fa-solid fa-layer-group text-primary text-xs"></i> Web & Mobile Application Development
+                                <span
+                                    class="inline-flex items-center gap-2 py-2 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 dark:bg-slate-900/60 dark:border-slate-800 dark:text-slate-300 font-semibold text-xs transition-colors hover:border-primary/40">
+                                    <i class="fa-solid fa-layer-group text-primary text-xs"></i> Web & Mobile
+                                    Application Development
                                 </span>
-                                <span class="inline-flex items-center gap-2 py-2 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 dark:bg-slate-900/60 dark:border-slate-800 dark:text-slate-300 font-semibold text-xs transition-colors hover:border-secondary/40">
-                                    <i class="fa-solid fa-rocket text-secondary text-xs"></i> Startup MVP & SaaS Solutions
+                                <span
+                                    class="inline-flex items-center gap-2 py-2 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-700 dark:bg-slate-900/60 dark:border-slate-800 dark:text-slate-300 font-semibold text-xs transition-colors hover:border-secondary/40">
+                                    <i class="fa-solid fa-rocket text-secondary text-xs"></i> Startup MVP & SaaS
+                                    Solutions
                                 </span>
                             </div>
                         </div>
@@ -667,23 +1051,27 @@
                     <!-- Right: What We Build -->
                     <div class="flex flex-col space-y-8" data-aos="fade-left">
                         <div class="flex flex-col space-y-3">
-                            <span class="text-secondary font-poppins font-bold text-sm uppercase tracking-wider">What We Build</span>
-                            <h2 class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
+                            <span class="text-secondary font-poppins font-bold text-sm uppercase tracking-wider">What We
+                                Build</span>
+                            <h2
+                                class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
                                 Real Projects, Real Business Impact
                             </h2>
                         </div>
-                        
+
                         <p class="text-textBody dark:text-slate-400 text-base leading-relaxed">
-                            At Gradix Technologies, we partner with startups and businesses to build practical digital solutions. From MVP development to scalable systems, our focus is on performance, reliability, and long-term growth.
+                            At Gradix Technologies, we partner with startups and businesses to build practical digital
+                            solutions. From MVP development to scalable systems, our focus is on performance,
+                            reliability, and long-term growth.
                         </p>
-                        
+
                         <div class="pt-2">
                             <a href="projects.html" class="btn-young-newt text-sm font-semibold">
                                 View Our Portfolio <i class="fas fa-arrow-right text-xs ml-2"></i>
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -767,7 +1155,9 @@
                         class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Testimonials</span>
                     <h2
                         class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white leading-tight">
-                        What clients <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">say about us</span>
+                        What clients <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">say about
+                            us</span>
                     </h2>
                 </div>
                 <div class="relative max-w-3xl mx-auto px-4 md:px-16">
@@ -788,7 +1178,8 @@
                                     <div class="tidy-content">
                                         <div class="tidy-header">
                                             <div class="flex items-center gap-3">
-                                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
                                                     PS
                                                 </div>
                                                 <div class="flex flex-col text-left">
@@ -798,11 +1189,15 @@
                                             </div>
                                         </div>
                                         <div class="tidy-footer">
-                                            <svg viewBox="0 0 24 24" class="quotes text-primary dark:text-secondary fill-current">
-                                                <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                            <svg viewBox="0 0 24 24"
+                                                class="quotes text-primary dark:text-secondary fill-current">
+                                                <path
+                                                    d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z">
+                                                </path>
                                             </svg>
                                             <p class="para">
-                                                “What we expected was great, but Gradix delivered even better Their solutions exceeded our expectations and truly made a difference.”
+                                                “What we expected was great, but Gradix delivered even better Their
+                                                solutions exceeded our expectations and truly made a difference.”
                                             </p>
                                         </div>
                                     </div>
@@ -815,7 +1210,8 @@
                                     <div class="tidy-content">
                                         <div class="tidy-header">
                                             <div class="flex items-center gap-3">
-                                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-emerald-500 flex items-center justify-center text-white font-bold text-sm shadow-md shrink-0">
                                                     MV
                                                 </div>
                                                 <div class="flex flex-col text-left">
@@ -825,11 +1221,16 @@
                                             </div>
                                         </div>
                                         <div class="tidy-footer">
-                                            <svg viewBox="0 0 24 24" class="quotes text-secondary dark:text-emerald-400 fill-current">
-                                                <path d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z"></path>
+                                            <svg viewBox="0 0 24 24"
+                                                class="quotes text-secondary dark:text-emerald-400 fill-current">
+                                                <path
+                                                    d="M4.58341 17.3211C3.55316 16.2274 3 15 3 13.0103C3 9.51086 5.45651 6.37366 9.03059 4.82318L9.92328 6.20079C6.58804 8.00539 5.93618 10.346 5.67564 11.822C6.21263 11.5443 6.91558 11.4466 7.60471 11.5105C9.40908 11.6778 10.8312 13.159 10.8312 15C10.8312 16.933 9.26416 18.5 7.33116 18.5C6.2581 18.5 5.23196 18.0095 4.58341 17.3211ZM14.5834 17.3211C13.5532 16.2274 13 15 13 13.0103C13 9.51086 15.4565 6.37366 19.0306 4.82318L19.9233 6.20079C16.588 8.00539 15.9362 10.346 15.6756 11.822C16.2126 11.5443 16.9156 11.4466 17.6047 11.5105C19.4091 11.6778 20.8312 13.159 20.8312 15C20.8312 16.933 19.2642 18.5 17.3312 18.5C16.2581 18.5 15.232 18.0095 14.5834 17.3211Z">
+                                                </path>
                                             </svg>
                                             <p class="para">
-                                                “Working with the team exceeded our expectations Our software performs flawlessly boosts productivity ensures efficiency and makes daily operations effortless.”
+                                                “Working with the team exceeded our expectations Our software performs
+                                                flawlessly boosts productivity ensures efficiency and makes daily
+                                                operations effortless.”
                                             </p>
                                         </div>
                                     </div>
@@ -849,8 +1250,10 @@
 
                 <!-- Testimonial Slider Navigation Dots -->
                 <div id="testimonial-dots" class="flex gap-2.5 items-center justify-center mt-8">
-                    <button class="testimonial-dot hover:bg-primary/50 active-dot" data-slide="0" aria-label="Go to slide 1"></button>
-                    <button class="testimonial-dot hover:bg-primary/50" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="testimonial-dot hover:bg-primary/50 active-dot" data-slide="0"
+                        aria-label="Go to slide 1"></button>
+                    <button class="testimonial-dot hover:bg-primary/50" data-slide="1"
+                        aria-label="Go to slide 2"></button>
                 </div>
 
             </div>
@@ -877,10 +1280,18 @@
                         </p>
 
                         <div class="flex gap-4">
-                            <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-                            <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
-                            <a href="https://wa.me/9488783430" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-                            <a href="https://x.com/gradix_tech" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                            <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="https://www.instagram.com/gradix_technologies/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
+                            <a href="https://wa.me/9488783430" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                            <a href="https://x.com/gradix_tech" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
                         </div>
                     </div>
 
@@ -898,12 +1309,18 @@
                     <div class="lg:col-span-3 flex flex-col space-y-6 text-left">
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Services</h4>
                         <ul class="space-y-3.5 text-sm">
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Web Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">UI / UX Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Software Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">App Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Content Creations</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Digital Marketing</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Web Development</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">UI / UX
+                                    Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Software
+                                    Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">App Development</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Content
+                                    Creations</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Digital
+                                    Marketing</a></li>
                         </ul>
                     </div>
 
@@ -911,18 +1328,22 @@
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
                         <ul class="space-y-3.5 text-sm">
                             <li>
-                                <a href="mailto:gradixtechnologies@gmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> gradixtechnologies@gmail.com
+                                <a href="mailto:gradixtechnologies@gmail.com"
+                                    class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i>
+                                    gradixtechnologies@gmail.com
                                 </a>
                             </li>
                             <li>
-                                <a href="tel:+919488783430" class="hover:text-primary transition-colors flex items-center gap-2">
+                                <a href="tel:+919488783430"
+                                    class="hover:text-primary transition-colors flex items-center gap-2">
                                     <i class="fa-solid fa-phone text-secondary text-xs"></i> +91 94887 83430
                                 </a>
                             </li>
                             <li class="flex items-start gap-2 leading-relaxed text-xs text-slate-400">
                                 <i class="fa-solid fa-map-location-dot text-secondary text-xs mt-1 shrink-0"></i>
-                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode, Namakkal, 637 215.</span>
+                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode,
+                                    Namakkal, 637 215.</span>
                             </li>
                         </ul>
                     </div>
@@ -949,11 +1370,15 @@
     <!-- ==========================================
          E. PREMIUM TIMELINE STEP DETAIL MODAL (How We Work)
          ========================================== -->
-    <div id="process-modal" class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto p-4 bg-slate-950/60 backdrop-blur-md">
-        <div id="process-modal-content" class="w-full max-w-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-2xl relative transform translate-y-12 transition-all duration-500">
-            
+    <div id="process-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto p-4 bg-slate-950/60 backdrop-blur-md">
+        <div id="process-modal-content"
+            class="w-full max-w-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 shadow-2xl relative transform translate-y-12 transition-all duration-500">
+
             <!-- Close Button -->
-            <button id="close-process-modal" class="absolute top-6 right-6 w-8 h-8 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-textHeading dark:hover:text-white transition-all duration-300 focus:outline-none" aria-label="Close Modal">
+            <button id="close-process-modal"
+                class="absolute top-6 right-6 w-8 h-8 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-textHeading dark:hover:text-white transition-all duration-300 focus:outline-none"
+                aria-label="Close Modal">
                 <i class="fas fa-times text-sm"></i>
             </button>
 
@@ -961,24 +1386,32 @@
             <div class="flex flex-col text-left space-y-6">
                 <!-- Icon and Badge row -->
                 <div class="flex items-center justify-between">
-                    <div id="process-modal-icon-wrap" class="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg bg-gradient-to-tr from-primary to-secondary">
+                    <div id="process-modal-icon-wrap"
+                        class="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg bg-gradient-to-tr from-primary to-secondary">
                         <i id="process-modal-icon" class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <span id="process-modal-badge" class="font-poppins font-black text-6xl text-slate-100 dark:text-slate-800 leading-none">01</span>
+                    <span id="process-modal-badge"
+                        class="font-poppins font-black text-6xl text-slate-100 dark:text-slate-800 leading-none">01</span>
                 </div>
 
                 <!-- Titles -->
                 <div class="flex flex-col space-y-2">
-                    <h3 id="process-modal-title" class="text-2xl font-extrabold font-poppins text-textHeading dark:text-white">Discovery & Consultation</h3>
+                    <h3 id="process-modal-title"
+                        class="text-2xl font-extrabold font-poppins text-textHeading dark:text-white">Discovery &
+                        Consultation</h3>
                     <p id="process-modal-desc" class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                        We understand your business goals, challenges, and requirements to ensure the right solution is planned from the beginning.
+                        We understand your business goals, challenges, and requirements to ensure the right solution is
+                        planned from the beginning.
                     </p>
                 </div>
 
                 <!-- Deliverables list -->
                 <div class="flex flex-col space-y-3.5 pt-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 font-poppins">Key Deliverables</span>
-                    <ul id="process-modal-deliverables" class="space-y-2.5 text-sm text-textHeading dark:text-slate-200">
+                    <span
+                        class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 font-poppins">Key
+                        Deliverables</span>
+                    <ul id="process-modal-deliverables"
+                        class="space-y-2.5 text-sm text-textHeading dark:text-slate-200">
                         <!-- Items injected dynamically -->
                     </ul>
                 </div>
