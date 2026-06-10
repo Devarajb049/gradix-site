@@ -2,26 +2,62 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
-    <link rel="icon" type="image/png" href="imgs/logo.png">
-
+    <!-- =====================================================
+         CORE META
+    ===================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Gradix Technologies</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Meta Descriptions for SEO -->
+    <title>Terms of Service | Gradix Technologies</title>
     <meta name="description"
         content="Read the Terms of Service for Gradix Technologies. Understand our project delivery policies, user responsibilities, payments, and intellectual property terms.">
+    <meta name="keywords" content="terms of service Gradix Technologies, project delivery terms, client agreement, IT startup policies">
+    <meta name="author" content="Gradix Technologies">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.gradixtech.com/terms.html">
+    <link rel="icon" type="image/png" href="imgs/logo.png">
 
-    <!-- Google Fonts: Outfit & Inter -->
+    <!-- =====================================================
+         GEO — Local SEO
+    ===================================================== -->
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Tiruchengode, Namakkal, Tamil Nadu">
+    <meta name="geo.position" content="11.3784;77.8940">
+    <meta name="ICBM" content="11.3784, 77.8940">
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ===================================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradixtech.com/terms.html">
+    <meta property="og:title" content="Terms of Service | Gradix Technologies">
+    <meta property="og:description"
+        content="Terms of Service of Gradix Technologies regarding web and software development projects.">
+    <meta property="og:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Gradix Technologies">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- =====================================================
+         TWITTER CARD
+    ===================================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gradix_tech">
+    <meta name="twitter:title" content="Terms of Service | Gradix Technologies">
+    <meta name="twitter:description"
+        content="Terms of Service of Gradix Technologies regarding web and software projects.">
+    <meta name="twitter:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <!-- Flicker-free Theme Loading Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
@@ -39,34 +75,32 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563EB',     /* Royal Blue */
-                        secondary: '#4F46E5',   /* Deep Indigo */
-                        accent: '#10B981',      /* Emerald */
-                        textHeading: '#0F172A', /* Dark Slate */
-                        textBody: '#475569',    /* Muted Slate */
-                        bgPrimary: '#FFFFFF',
-                        bgSecondary: '#F8FAFC',
-                        borderLight: '#E2E8F0',
+                        primary: '#2563EB',
+                        secondary: '#06B6D4',
+                        accent: '#F97316',
+                        bgPrimary: 'var(--bg-primary)',
+                        bgSecondary: 'var(--bg-secondary)',
+                        textHeading: 'var(--text-heading)',
+                        textBody: 'var(--text-body)',
+                        borderLight: 'var(--border)',
                     },
                     fontFamily: {
-                        outfit: ['Outfit', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif'],
-                        poppins: ['Clash Grotesk', 'Poppins', 'sans-serif'],
+                        sans: ['Space Grotesk', 'Outfit', 'sans-serif'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['DM Mono', 'Space Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
-
+    
     <!-- AOS Animate Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    
     <!-- Custom Style System -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body
-    class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
+<body class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
 
     <!-- ==========================================
          B. SCROLL PROGRESS BAR
@@ -164,11 +198,11 @@
 
                     <!-- Navigation Links -->
                     <nav class="flex items-center gap-7">
-                        <a href="index.html" class="nav-link py-2 text-sm">Home</a>
-                        <a href="about.html" class="nav-link py-2 text-sm">About</a>
-                        <a href="services.html" class="nav-link py-2 text-sm">Services</a>
-                        <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
-                        <a href="contact.html" class="nav-link py-2 text-sm">Contact</a>
+                        <a href="index.html" class="nav-link py-2 text-sm text-roll">Home</a>
+                        <a href="about.html" class="nav-link py-2 text-sm text-roll">About</a>
+                        <a href="services.html" class="nav-link py-2 text-sm text-roll">Services</a>
+                        <a href="projects.html" class="nav-link py-2 text-sm text-roll">Projects</a>
+                        <a href="contact.html" class="nav-link py-2 text-sm text-roll">Contact</a>
                     </nav>
 
                     <!-- Theme Toggle & Request Quote Button -->
@@ -337,7 +371,7 @@
                     Center</span>
                 <h1
                     class="text-4xl md:text-5xl lg:text-6xl font-black font-poppins text-textHeading dark:text-white mt-6 mb-3 tracking-tight">
-                    Terms of Service
+                    Terms of <span class="font-serif-italic text-primary dark:text-secondary">Service</span>
                 </h1>
 
             </div>
@@ -352,7 +386,11 @@
 
                     <!-- Left Column: Sticky Sidebar Index (Desktop) -->
                     <aside
-                        class="hidden lg:block lg:col-span-3 sticky top-28 self-start bg-slate-50/40 dark:bg-slate-900/10 border border-slate-100 dark:border-slate-800/40 rounded-3xl p-6 backdrop-blur-sm shadow-sm">
+                        class="hidden lg:block lg:col-span-3 sticky top-28 self-start bg-slate-50/40 dark:bg-slate-900/10 border border-slate-100 dark:border-slate-800/40 rounded-3xl p-6 backdrop-blur-sm shadow-sm relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div data-aos="fade-right">
                             <h4
                                 class="font-poppins font-bold text-textHeading dark:text-white text-xs uppercase tracking-wider mb-5 pb-3 border-b border-slate-200/50 dark:border-slate-800/50">
@@ -406,6 +444,10 @@
                     <div id="legal-content-scroll"
                         class="col-span-1 lg:col-span-9 bg-white/60 dark:bg-slate-900/10 border border-slate-100 dark:border-slate-800/40 shadow-xl rounded-3xl p-8 md:p-12 backdrop-blur-md relative overflow-hidden lg:max-h-[68vh] lg:overflow-y-auto lg:scroll-smooth pr-4 custom-scrollbar"
                         data-aos="fade-left">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
 
                         <!-- Premium abstract glowing background shape -->
                         <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
@@ -815,6 +857,18 @@
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+    <!-- Technical Debug Panel -->
+    <div class="debug-panel">
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">X: <span data-debug-x>0</span></div>
+            <div class="debug-panel-item">Y: <span data-debug-y>0</span></div>
+        </div>
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">Scroll: <span data-debug-scroll>0%</span></div>
+            <div class="debug-panel-item">Time: <span data-debug-time>00:00:00</span></div>
+        </div>
+    </div>
+    
     <!-- Custom Page Script -->
     <script src="js/script.js"></script>
 

@@ -46,39 +46,138 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 3. CURSOR AMBIENT GLOW TRACKER
+    // 3. PREMIUM INTERACTIVE CURSOR & BLUEPRINT DEBUG PANEL & TEXT ROLL
     // ==========================================
-    const glowElement = document.createElement('div');
-    glowElement.classList.add('cursor-glow-element');
-    document.body.appendChild(glowElement);
+    
+    // Create custom cursor elements
+    const cursorCircle = document.createElement('div');
+    cursorCircle.classList.add('custom-cursor');
+    const cursorText = document.createElement('span');
+    cursorText.classList.add('custom-cursor-text');
+    cursorText.textContent = '';
+    cursorCircle.appendChild(cursorText);
+    
+    const cursorDot = document.createElement('div');
+    cursorDot.classList.add('custom-cursor-dot');
+    
+    document.body.appendChild(cursorCircle);
+    document.body.appendChild(cursorDot);
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let glowX = mouseX;
-    let glowY = mouseY;
+    
+    let circX = mouseX;
+    let circY = mouseY;
+    let dotX = mouseX;
+    let dotY = mouseY;
 
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
     });
 
-    // Smooth cursor glow tracking with ease inertia (requestAnimationFrame)
-    function updateGlowPosition() {
+    // Cursor Lerp Easing Loop
+    function updateCursor() {
         // Linear interpolation (lerp) for smooth tracking
-        glowX += (mouseX - glowX) * 0.08;
-        glowY += (mouseY - glowY) * 0.08;
+        circX += (mouseX - circX) * 0.12; // Eased circles lag
+        circY += (mouseY - circY) * 0.12;
         
-        glowElement.style.left = `${glowX}px`;
-        glowElement.style.top = `${glowY}px`;
+        dotX += (mouseX - dotX) * 0.35;  // Responsive dot lag
+        dotY += (mouseY - dotY) * 0.35;
         
-        requestAnimationFrame(updateGlowPosition);
+        cursorCircle.style.left = `${circX}px`;
+        cursorCircle.style.top = `${circY}px`;
+        
+        cursorDot.style.left = `${dotX}px`;
+        cursorDot.style.top = `${dotY}px`;
+        
+        // Debug Coordinates update
+        const debugX = document.querySelector('[data-debug-x]');
+        const debugY = document.querySelector('[data-debug-y]');
+        if (debugX) debugX.textContent = Math.round(circX);
+        if (debugY) debugY.textContent = Math.round(circY);
+        
+        requestAnimationFrame(updateCursor);
     }
-    updateGlowPosition();
+    updateCursor();
 
-    // Hide glow on mobile devices or touch interfaces
+    // Custom hover trigger text label binding
+    const hoverSelectors = 'a, button, select, input, textarea, .why-card, .clever-panther-card, .splendid-firefox-card, [data-cursor-text]';
+    
+    document.addEventListener('mouseover', (e) => {
+        const target = e.target.closest(hoverSelectors);
+        if (target) {
+            cursorCircle.classList.add('active');
+            const hoverText = target.getAttribute('data-cursor-text') || 'view';
+            cursorText.textContent = hoverText;
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        const target = e.target.closest(hoverSelectors);
+        if (target) {
+            cursorCircle.classList.remove('active');
+            cursorText.textContent = '';
+        }
+    });
+
+    // Hide custom cursor on touch devices
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-        glowElement.style.display = 'none';
+        cursorCircle.style.display = 'none';
+        cursorDot.style.display = 'none';
     }
+
+    // Live Tickers & Debug Updates (Time, Scroll Percentage)
+    const debugScroll = document.querySelector('[data-debug-scroll]');
+    const debugTime = document.querySelector('[data-debug-time]');
+
+    function updateDebugStats() {
+        if (debugScroll) {
+            const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const currentScrollPos = window.scrollY;
+            const percentage = totalScrollHeight > 0 ? Math.round((currentScrollPos / totalScrollHeight) * 100) : 0;
+            debugScroll.textContent = `${percentage}%`;
+        }
+        if (debugTime) {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            debugTime.textContent = timeString;
+        }
+    }
+    window.addEventListener('scroll', updateDebugStats);
+    setInterval(updateDebugStats, 1000);
+    updateDebugStats(); // Initial call
+
+    // Dynamic Text Roll Constructor
+    const rollElements = document.querySelectorAll('.text-roll');
+    rollElements.forEach(el => {
+        const text = el.textContent.trim();
+        if (text && !el.querySelector('.text-roll-row')) {
+            el.innerHTML = '';
+            el.setAttribute('aria-label', text);
+            
+            const row = document.createElement('span');
+            row.className = 'text-roll-row';
+            
+            const clone = document.createElement('span');
+            clone.className = 'text-roll-row text-roll-clone';
+            clone.setAttribute('aria-hidden', 'true');
+            
+            [...text].forEach((char, idx) => {
+                const span = document.createElement('span');
+                span.className = 'text-roll-letter';
+                span.style.setProperty('--i', idx);
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                row.appendChild(span);
+                
+                const spanClone = span.cloneNode(true);
+                clone.appendChild(spanClone);
+            });
+            
+            el.appendChild(row);
+            el.appendChild(clone);
+        }
+    });
 
     // ==========================================
     // 4. MAGNETIC BUTTONS FORCE

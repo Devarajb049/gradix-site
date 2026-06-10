@@ -182,20 +182,28 @@
                         primary: '#2563EB',
                         secondary: '#06B6D4',
                         accent: '#F97316',
-                        bgPrimary: '#FFFFFF',
-                        bgSecondary: '#F8FAFC',
-                        textHeading: '#0F172A',
-                        textBody: '#475569',
-                        borderLight: '#E2E8F0',
+                        bgPrimary: 'var(--bg-primary)',
+                        bgSecondary: 'var(--bg-secondary)',
+                        textHeading: 'var(--text-heading)',
+                        textBody: 'var(--text-body)',
+                        borderLight: 'var(--border)',
                     },
                     fontFamily: {
-                        poppins: ['Clash Grotesk', 'Outfit', 'sans-serif'],
-                        inter: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Space Grotesk', 'Outfit', 'sans-serif'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['DM Mono', 'Space Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -211,7 +219,7 @@
     class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
 
     <!-- ==========================================
-         B. SCROLL PROGRESS BAR
+         SCROLL PROGRESS BAR
          ========================================== -->
     <div id="scroll-progress"></div>
 
@@ -310,11 +318,11 @@
 
                     <!-- Navigation Links -->
                     <nav class="flex items-center gap-7">
-                        <a href="index.html" class="nav-link py-2 text-sm">Home</a>
-                        <a href="about.html" class="nav-link py-2 text-sm">About</a>
-                        <a href="services.html" class="nav-link py-2 text-sm">Services</a>
-                        <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
-                        <a href="contact.html" class="nav-link py-2 text-sm">Contact</a>
+                        <a href="index.html" class="nav-link py-2 text-sm text-roll active-link">Home</a>
+                        <a href="about.html" class="nav-link py-2 text-sm text-roll">About</a>
+                        <a href="services.html" class="nav-link py-2 text-sm text-roll">Services</a>
+                        <a href="projects.html" class="nav-link py-2 text-sm text-roll">Projects</a>
+                        <a href="contact.html" class="nav-link py-2 text-sm text-roll">Contact</a>
                     </nav>
 
                     <!-- Theme Toggle & Request Quote Button -->
@@ -453,22 +461,6 @@
                     <span>Request A Quote</span>
                 </a>
 
-                <!-- Social Links -->
-                <div
-                    class="flex items-center justify-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/60">
-                    <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
-                        aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-                    <a href="https://www.instagram.com/gradix_technologies/" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
-                        aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
-                    <a href="https://wa.me/9488783430" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
-                        aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-                    <a href="https://x.com/gradix_tech" target="_blank"
-                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
-                        aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
-                </div>
             </div>
 
         </div>
@@ -878,101 +870,138 @@
         <!-- ==========================================
              4. SERVICES PREVIEW CARDS
              ========================================== -->
-        <section id="home-services"
-            class="py-24 bg-bgSecondary dark:bg-slate-900/40 relative z-10 px-6 lg:px-8 border-y border-slate-100 dark:border-slate-900">
+        <section id="services-hero" class="pt-36 pb-24 relative z-10 px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
 
-                <div class="flex flex-col items-center text-center space-y-4 mb-16" data-aos="fade-up">
+                <!-- Page Header -->
+                <div class="flex flex-col items-center text-center space-y-4 mb-20" data-aos="fade-up">
                     <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our
                         Services</span>
-                    <h2
-                        class="text-3xl md:text-4xl font-extrabold font-poppins text-textHeading dark:text-white max-w-2xl leading-tight">
-                        Customizable Digital Solutions for your Growth
-                    </h2>
+                    <h1
+                        class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white max-w-3xl leading-tight">
+                        Customizable <span class="font-serif-italic text-primary dark:text-secondary">Digital
+                            Solutions</span> for your Growth
+                    </h1>
+                    <p class="text-textBody dark:text-slate-400 text-base max-w-2xl leading-relaxed">
+                        At Gradix Technologies, we design and deliver practical digital solutions focused on real
+                        business needs. Our approach combines strategy, technology, and performance to help brands grow
+                        sustainably in a competitive digital space.
+                    </p>
                 </div>
 
-                <!-- Cards Grid - Showing all 6 services with conic-gradient border light effect -->
-                <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Core 6 Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up"
+                    data-aos-delay="100">
 
                     <!-- 1. Web Development -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-code"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-primary opacity-60">[01]</div>
+                        <div class="icon-container text-primary">
+                            <i class="fa-solid fa-code text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>Web Development</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Web Development
+                        </h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             Building websites that combine sleek design with robust functionality. Helping businesses
                             connect, engage, and grow online.
                         </p>
                     </div>
 
                     <!-- 2. UI / UX Development -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-compass-drafting"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-secondary opacity-60">[02]</div>
+                        <div class="icon-container text-secondary">
+                            <i class="fa-solid fa-compass-drafting text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>UI / UX Development</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">UI / UX
+                            Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             We design intuitive and engaging user interfaces that provide seamless experiences. Our
                             Design turn complex ideas into user-friendly digital journeys.
                         </p>
                     </div>
 
                     <!-- 3. Software Development -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-laptop-code"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-accent opacity-60">[03]</div>
+                        <div class="icon-container text-accent">
+                            <i class="fa-solid fa-laptop-code text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>Software Development</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Software
+                            Development</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             Building software that adapts to your needs. Reliable, innovative, and optimized for
                             seamless performance and scalability.
                         </p>
                     </div>
 
                     <!-- 4. App Development -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-primary opacity-60">[04]</div>
+                        <div class="icon-container text-primary">
+                            <i class="fa-solid fa-mobile-screen text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>App Development</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">App Development
+                        </h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             Apps that captivate inspire and deliver results engage instantly Transforming concepts into
                             mobile solutions that scale and perform inspire growth.
                         </p>
                     </div>
 
                     <!-- 5. Content Creations -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-pen-nib"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-secondary opacity-60">[05]</div>
+                        <div class="icon-container text-secondary">
+                            <i class="fa-solid fa-pen-nib text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>Content Creations</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Content
+                            Creations</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             Content that tells your story engages your audience and builds trust Transforming ideas into
                             powerful experiences that create results.
                         </p>
                     </div>
 
                     <!-- 6. Digital Marketing -->
-                    <div class="why-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="why-card-fade"></div>
-                        <div class="why-icon">
-                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-accent opacity-60">[06]</div>
+                        <div class="icon-container text-accent">
+                            <i class="fa-solid fa-magnifying-glass-chart text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3>Digital Marketing</h3>
-                        <p>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Digital
+                            Marketing</h3>
+                        <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
                             Digital marketing that connects engages and converts drive growth Creating campaigns that
                             grow your brand inspire action and deliver impact boost visibility.
                         </p>
@@ -1040,11 +1069,10 @@
                     </div>
 
                     <!-- Step 1: Discovery & Consultation -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
-                        data-step="0">
+                    <div class="timeline-step process-card flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="0" data-modal="modal-discovery" title="Click to learn more">
                         <div
                             class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-lg transition-all duration-500 dark:bg-primary/25 mb-0 lg:mb-6 shrink-0">
-                            <!-- Step Number badge -->
                             <span
                                 class="timeline-badge absolute -top-3.5 -right-3.5 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold font-poppins flex items-center justify-center shadow-md border-2 border-white dark:border-slate-950 transition-all duration-500">01</span>
                             <i class="fa-solid fa-magnifying-glass text-2xl"></i>
@@ -1057,12 +1085,15 @@
                                 We understand your business goals, challenges, and requirements to ensure the right
                                 solution is planned from the beginning.
                             </p>
+                            <span
+                                class="process-learn-more mt-3 text-xs font-semibold text-primary flex items-center gap-1 lg:justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"><i
+                                    class="fa-solid fa-circle-info"></i> Learn More</span>
                         </div>
                     </div>
 
                     <!-- Step 2: Strategy & Planning -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
-                        data-step="1">
+                    <div class="timeline-step process-card flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="1" data-modal="modal-strategy" title="Click to learn more">
                         <div
                             class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10 text-secondary border border-secondary/20 shadow-lg transition-all duration-500 dark:bg-secondary/25 mb-0 lg:mb-6 shrink-0">
                             <span
@@ -1077,12 +1108,15 @@
                                 We design a clear roadmap including architecture, features, timelines, and technology
                                 choices for smooth execution.
                             </p>
+                            <span
+                                class="process-learn-more mt-3 text-xs font-semibold text-secondary flex items-center gap-1 lg:justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"><i
+                                    class="fa-solid fa-circle-info"></i> Learn More</span>
                         </div>
                     </div>
 
                     <!-- Step 3: Development & Execution -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
-                        data-step="2">
+                    <div class="timeline-step process-card flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="2" data-modal="modal-development" title="Click to learn more">
                         <div
                             class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-accent/10 text-accent border border-accent/20 shadow-lg transition-all duration-500 dark:bg-accent/25 mb-0 lg:mb-6 shrink-0">
                             <span
@@ -1097,12 +1131,15 @@
                                 Our team builds and implements your solution using modern technologies with a strong
                                 focus on performance and security.
                             </p>
+                            <span
+                                class="process-learn-more mt-3 text-xs font-semibold text-accent flex items-center gap-1 lg:justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"><i
+                                    class="fa-solid fa-circle-info"></i> Learn More</span>
                         </div>
                     </div>
 
                     <!-- Step 4: Launch, Support & Growth -->
-                    <div class="timeline-step flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
-                        data-step="3">
+                    <div class="timeline-step process-card flex flex-row lg:flex-col items-start lg:items-center text-left lg:text-center group cursor-pointer gap-6 lg:gap-0"
+                        data-step="3" data-modal="modal-launch" title="Click to learn more">
                         <div
                             class="timeline-icon relative flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 shadow-lg transition-all duration-500 dark:bg-emerald-500/25 mb-0 lg:mb-6 shrink-0">
                             <span
@@ -1117,6 +1154,9 @@
                                 After launch, we provide continuous support, improvements, and optimizations to help
                                 your business scale confidently.
                             </p>
+                            <span
+                                class="process-learn-more mt-3 text-xs font-semibold text-emerald-500 flex items-center gap-1 lg:justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"><i
+                                    class="fa-solid fa-circle-info"></i> Learn More</span>
                         </div>
                     </div>
 

@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <link rel="icon" type="image/png" href="imgs/logo.png">
-
+    <!-- =====================================================
+         CORE META
+    ===================================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Gradix Technologies - Reach out to our engineering team to develop high-performance software solutions for your enterprise.">
-    
-    <title>Contact Us | Gradix Technologies</title>
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Contact Us | Gradix Technologies – Web & Software Development Inquiries</title>
+    <meta name="description"
+        content="Contact Gradix Technologies. Reach out to our software development and design team in Tiruchengode, Namakkal, Tamil Nadu, to develop high-performance applications for your business.">
+    <meta name="keywords"
+        content="contact Gradix Technologies, hire web developers Tiruchengode, IT company contact Namakkal, software development inquiry Tamil Nadu, digital marketing consultation India">
+    <meta name="author" content="Gradix Technologies">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.gradixtech.com/contact.html">
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+
+    <!-- =====================================================
+         GEO — Local SEO
+    ===================================================== -->
+    <meta name="geo.region" content="IN-TN">
+    <meta name="geo.placename" content="Tiruchengode, Namakkal, Tamil Nadu">
+    <meta name="geo.position" content="11.3784;77.8940">
+    <meta name="ICBM" content="11.3784, 77.8940">
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ===================================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gradixtech.com/contact.html">
+    <meta property="og:title" content="Contact Us | Gradix Technologies">
+    <meta property="og:description"
+        content="Contact Gradix Technologies. Reach out to our engineering and design team to plan and develop high-performance web, app, and software solutions.">
+    <meta property="og:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Gradix Technologies">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- =====================================================
+         TWITTER CARD
+    ===================================================== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gradix_tech">
+    <meta name="twitter:title" content="Contact Us | Gradix Technologies">
+    <meta name="twitter:description"
+        content="Reach out to Gradix Technologies for professional web, app, and custom software development services.">
+    <meta name="twitter:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
+
+    <!-- =====================================================
+         SCHEMA.ORG JSON-LD — ContactPage
+    ===================================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://www.gradixtech.com/contact.html",
+          "url": "https://www.gradixtech.com/contact.html",
+          "name": "Contact Gradix Technologies",
+          "description": "Get in touch with Gradix Technologies for custom web development, mobile app development, software systems, and digital marketing consultation.",
+          "isPartOf": { "@id": "https://www.gradixtech.com/#website" },
+          "publisher": { "@id": "https://www.gradixtech.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
     <!-- Flicker-free Theme Loading Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
@@ -29,20 +90,26 @@
                         primary: '#2563EB',
                         secondary: '#06B6D4',
                         accent: '#F97316',
-                        bgPrimary: '#FFFFFF',
-                        bgSecondary: '#F8FAFC',
-                        textHeading: '#0F172A',
-                        textBody: '#475569',
-                        borderLight: '#E2E8F0',
+                        bgPrimary: 'var(--bg-primary)',
+                        bgSecondary: 'var(--bg-secondary)',
+                        textHeading: 'var(--text-heading)',
+                        textBody: 'var(--text-body)',
+                        borderLight: 'var(--border)',
                     },
                     fontFamily: {
-                        poppins: ['Clash Grotesk', 'Outfit', 'sans-serif'],
-                        inter: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Space Grotesk', 'Outfit', 'sans-serif'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['DM Mono', 'Space Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -140,11 +207,11 @@
                     
                     <!-- Navigation Links -->
                     <nav class="flex items-center gap-7">
-                        <a href="index.html" class="nav-link py-2 text-sm">Home</a>
-                        <a href="about.html" class="nav-link py-2 text-sm">About</a>
-                        <a href="services.html" class="nav-link py-2 text-sm">Services</a>
-                        <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
-                        <a href="contact.html" class="nav-link py-2 text-sm">Contact</a>
+                        <a href="index.html" class="nav-link py-2 text-sm text-roll">Home</a>
+                        <a href="about.html" class="nav-link py-2 text-sm text-roll">About</a>
+                        <a href="services.html" class="nav-link py-2 text-sm text-roll">Services</a>
+                        <a href="projects.html" class="nav-link py-2 text-sm text-roll">Projects</a>
+                        <a href="contact.html" class="nav-link py-2 text-sm text-roll">Contact</a>
                     </nav>
 
                     <!-- Theme Toggle & Request Quote Button -->
@@ -288,10 +355,10 @@
                 <div class="flex flex-col items-center text-center space-y-4 mb-16" data-aos="fade-up">
                     <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Reach out to us</span>
                     <h1 class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white leading-tight">
-                        Get in Touch
+                        Get in <span class="font-serif-italic text-primary dark:text-secondary">Touch</span>
                     </h1>
                     <p class="text-textBody dark:text-slate-400 text-sm md:text-base max-w-2xl leading-relaxed mt-2">
-                        Reach out to us for tailored digital solutions that drive results sollicitudin nec.
+                        Reach out to us for tailored digital solutions that drive results.
                     </p>
                 </div>
 
@@ -302,7 +369,11 @@
                     <div class="lg:col-span-5 flex flex-col gap-6" data-aos="fade-right">
                         
                         <!-- Phone Card -->
-                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300">
+                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300 relative">
+                            <span class="corner-plus cp-tl">+</span>
+                            <span class="corner-plus cp-tr">+</span>
+                            <span class="corner-plus cp-bl">+</span>
+                            <span class="corner-plus cp-br">+</span>
                             <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary dark:bg-primary/20 dark:text-secondary flex items-center justify-center text-xl shrink-0">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
@@ -313,7 +384,11 @@
                         </div>
 
                         <!-- Email Card -->
-                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300">
+                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300 relative">
+                            <span class="corner-plus cp-tl">+</span>
+                            <span class="corner-plus cp-tr">+</span>
+                            <span class="corner-plus cp-bl">+</span>
+                            <span class="corner-plus cp-br">+</span>
                             <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary flex items-center justify-center text-xl shrink-0">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
@@ -324,7 +399,11 @@
                         </div>
 
                         <!-- Address Card -->
-                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300">
+                        <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 flex gap-5 items-start hover:scale-[1.02] transition-all duration-300 relative">
+                            <span class="corner-plus cp-tl">+</span>
+                            <span class="corner-plus cp-tr">+</span>
+                            <span class="corner-plus cp-bl">+</span>
+                            <span class="corner-plus cp-br">+</span>
                             <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent dark:bg-accent/20 dark:text-accent flex items-center justify-center text-xl shrink-0">
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </div>
@@ -341,12 +420,16 @@
                     <!-- Right Column: Contact Form Card (7 cols) -->
                     <div class="lg:col-span-7" data-aos="fade-left">
                         <div class="glass-card p-8 md:p-10 rounded-[32px] border border-slate-200 dark:border-slate-800 shadow-2xl relative overflow-hidden text-left bg-slate-50/50 dark:bg-[#0F172A]/40">
+                            <span class="corner-plus cp-tl">+</span>
+                            <span class="corner-plus cp-tr">+</span>
+                            <span class="corner-plus cp-bl">+</span>
+                            <span class="corner-plus cp-br">+</span>
                             
                             <!-- Decorative glow -->
                             <div class="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
 
                             <h2 class="text-2xl font-extrabold font-poppins text-textHeading dark:text-white mb-8">
-                                Let's Talk About Your Next Project
+                                Let's Talk About Your <span class="font-serif-italic text-primary dark:text-secondary">Next Project</span>
                             </h2>
 
                             <form id="contact-form" class="space-y-6">
@@ -532,6 +615,18 @@
 
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Technical Debug Panel -->
+    <div class="debug-panel">
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">X: <span data-debug-x>0</span></div>
+            <div class="debug-panel-item">Y: <span data-debug-y>0</span></div>
+        </div>
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">Scroll: <span data-debug-scroll>0%</span></div>
+            <div class="debug-panel-item">Time: <span data-debug-time>00:00:00</span></div>
+        </div>
+    </div>
     
     <!-- Custom Page Script -->
     <script src="js/script.js"></script>

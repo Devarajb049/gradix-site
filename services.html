@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <!-- =====================================================
          CORE META
@@ -9,8 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Our Services | Gradix Technologies – Web, App & Software Development in Namakkal</title>
-    <meta name="description" content="Gradix Technologies offers professional Web Development, Mobile App Development, Software Development, UI/UX Design, Digital Marketing, and Content Creation services in Tiruchengode, Namakkal, Tamil Nadu.">
-    <meta name="keywords" content="web development services Tiruchengode, mobile app development Namakkal, software development Tamil Nadu, UI UX design services, digital marketing company Namakkal, content creation services India, IT services Tiruchengode">
+    <meta name="description"
+        content="Gradix Technologies offers professional Web Development, Mobile App Development, Software Development, UI/UX Design, Digital Marketing, and Content Creation services in Tiruchengode, Namakkal, Tamil Nadu.">
+    <meta name="keywords"
+        content="web development services Tiruchengode, mobile app development Namakkal, software development Tamil Nadu, UI UX design services, digital marketing company Namakkal, content creation services India, IT services Tiruchengode">
     <meta name="author" content="Gradix Technologies">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://www.gradixtech.com/services.html">
@@ -30,7 +33,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.gradixtech.com/services.html">
     <meta property="og:title" content="Our Services | Gradix Technologies">
-    <meta property="og:description" content="Web Development, App Development, Software, UI/UX Design, Digital Marketing & more. Professional IT services by Gradix Technologies, Tiruchengode, Tamil Nadu.">
+    <meta property="og:description"
+        content="Web Development, App Development, Software, UI/UX Design, Digital Marketing & more. Professional IT services by Gradix Technologies, Tiruchengode, Tamil Nadu.">
     <meta property="og:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -43,7 +47,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@gradix_tech">
     <meta name="twitter:title" content="Our Services | Gradix Technologies">
-    <meta name="twitter:description" content="Professional Web, App & Software Development services in Tiruchengode, Namakkal by Gradix Technologies.">
+    <meta name="twitter:description"
+        content="Professional Web, App & Software Development services in Tiruchengode, Namakkal by Gradix Technologies.">
     <meta name="twitter:image" content="https://www.gradixtech.com/imgs/og-image.jpg">
 
     <!-- =====================================================
@@ -108,7 +113,7 @@
     </script>
 
     <title>Our Services | Gradix Technologies</title>
-    
+
     <!-- Flicker-free Theme Loading Script -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
@@ -129,31 +134,41 @@
                         primary: '#2563EB',
                         secondary: '#06B6D4',
                         accent: '#F97316',
-                        bgPrimary: '#FFFFFF',
-                        bgSecondary: '#F8FAFC',
-                        textHeading: '#0F172A',
-                        textBody: '#475569',
-                        borderLight: '#E2E8F0',
+                        bgPrimary: 'var(--bg-primary)',
+                        bgSecondary: 'var(--bg-secondary)',
+                        textHeading: 'var(--text-heading)',
+                        textBody: 'var(--text-body)',
+                        borderLight: 'var(--border)',
                     },
                     fontFamily: {
-                        poppins: ['Clash Grotesk', 'Outfit', 'sans-serif'],
-                        inter: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Space Grotesk', 'Outfit', 'sans-serif'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif'],
+                        mono: ['DM Mono', 'Space Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
-    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
+
     <!-- AOS (Animate On Scroll) Stylesheet -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+
     <!-- Custom Style System -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
+
+<body
+    class="bg-white dark:bg-slate-950 text-textBody dark:text-slate-400 antialiased overflow-x-hidden font-inter select-none">
 
     <!-- ==========================================
          B. SCROLL PROGRESS BAR
@@ -173,19 +188,25 @@
         <!-- ==========================================
              1. NAVBAR (Sticky & Glassmorphism with Dark Toggle)
              ========================================== -->
-        <header id="navbar" class="fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-400" data-aos="fade-down">
-            
+        <header id="navbar" class="fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-400"
+            data-aos="fade-down">
+
             <!-- Row 1: Top Bar (Desktop Only) -->
             <div class="header-top-bar hidden md:block w-full">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-between">
                     <!-- Tagline -->
-                    <span class="font-poppins font-medium tracking-wide">The Future in Software & Enterprise. Worldwide.</span>
+                    <span class="font-poppins font-medium tracking-wide">The Future in Software & Enterprise.
+                        Worldwide.</span>
                     <!-- Social Media Links -->
                     <div class="flex items-center gap-5">
-                        <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank" class="top-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="top-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://wa.me/9488783430" target="_blank" class="top-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="https://x.com/gradix_tech" target="_blank" class="top-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                            class="top-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="top-social-link"
+                            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/9488783430" target="_blank" class="top-social-link"
+                            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://x.com/gradix_tech" target="_blank" class="top-social-link"
+                            aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -193,11 +214,14 @@
             <!-- Row 2: Info Bar (Desktop & Mobile view wrapper) -->
             <div class="header-info-bar w-full h-[75px] md:h-[90px] flex items-center">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full flex items-center justify-between">
-                    
+
                     <!-- Logo -->
-                    <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
-                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo" class="h-[34px] md:h-10 w-auto block dark:hidden">
-                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-[34px] md:h-10 w-auto hidden dark:block">
+                    <a href="index.html"
+                        class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
+                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo"
+                            class="h-[34px] md:h-10 w-auto block dark:hidden">
+                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo"
+                            class="h-[34px] md:h-10 w-auto hidden dark:block">
                     </a>
 
                     <!-- Contact Details (Desktop Only) -->
@@ -219,16 +243,22 @@
                             </div>
                             <div class="header-contact-text">
                                 <span class="header-contact-label">Email Us Here</span>
-                                <a href="mailto:gradixtechnologies@gmail.com" class="header-contact-value">gradixtechnologies@gmail.com</a>
+                                <a href="mailto:gradixtechnologies@gmail.com"
+                                    class="header-contact-value">gradixtechnologies@gmail.com</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Hamburger Menu Trigger (Mobile Only) -->
-                    <button id="hamburger-btn" class="md:hidden flex flex-col justify-between w-6 h-[17px] focus:outline-none focus:ring-2 focus:ring-primary/20 rounded group" aria-label="Toggle Navigation Menu">
-                        <span class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
-                        <span class="w-full h-[2px] rounded transition-all duration-300 bg-textHeading dark:bg-white"></span>
-                        <span class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
+                    <button id="hamburger-btn"
+                        class="md:hidden flex flex-col justify-between w-6 h-[17px] focus:outline-none focus:ring-2 focus:ring-primary/20 rounded group"
+                        aria-label="Toggle Navigation Menu">
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 bg-textHeading dark:bg-white"></span>
+                        <span
+                            class="w-full h-[2px] rounded transition-all duration-300 origin-left bg-textHeading dark:bg-white"></span>
                     </button>
 
                 </div>
@@ -237,14 +267,14 @@
             <!-- Row 3: Nav Bar (Desktop Only) -->
             <div class="header-nav-bar hidden md:flex w-full items-center">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full flex items-center justify-between">
-                    
+
                     <!-- Navigation Links -->
                     <nav class="flex items-center gap-7">
-                        <a href="index.html" class="nav-link py-2 text-sm">Home</a>
-                        <a href="about.html" class="nav-link py-2 text-sm">About</a>
-                        <a href="services.html" class="nav-link py-2 text-sm">Services</a>
-                        <a href="projects.html" class="nav-link py-2 text-sm">Projects</a>
-                        <a href="contact.html" class="nav-link py-2 text-sm">Contact</a>
+                        <a href="index.html" class="nav-link py-2 text-sm text-roll">Home</a>
+                        <a href="about.html" class="nav-link py-2 text-sm text-roll">About</a>
+                        <a href="services.html" class="nav-link py-2 text-sm text-roll">Services</a>
+                        <a href="projects.html" class="nav-link py-2 text-sm text-roll">Projects</a>
+                        <a href="contact.html" class="nav-link py-2 text-sm text-roll">Contact</a>
                     </nav>
 
                     <!-- Theme Toggle & Request Quote Button -->
@@ -268,9 +298,12 @@
                         <a href="contact.html" class="btn-smart-moth">
                             <div class="svg-wrapper-1">
                                 <div class="svg-wrapper">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="fill-current">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
+                                        class="fill-current">
                                         <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                        <path
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
                                     </svg>
                                 </div>
                             </div>
@@ -285,7 +318,7 @@
 
         <!-- Mobile Drawer Navigation Panel -->
         <div id="mobile-nav" class="mobile-nav-panel flex flex-col justify-between">
-            
+
             <!-- Drawer Header -->
             <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-800">
                 <!-- Logo -->
@@ -310,7 +343,9 @@
                         </div>
                     </button>
                     <!-- Close Button -->
-                    <button id="close-menu-btn" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 focus:outline-none" aria-label="Close menu">
+                    <button id="close-menu-btn"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 focus:outline-none"
+                        aria-label="Close menu">
                         <i class="fa-solid fa-xmark text-lg"></i>
                     </button>
                 </div>
@@ -318,11 +353,21 @@
 
             <!-- Drawer Links -->
             <div class="flex flex-col gap-3 py-6 overflow-y-auto grow">
-                <a href="index.html" class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-home mr-3 text-primary"></i>Home</a>
-                <a href="about.html" class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-user-group mr-3 text-primary"></i>About</a>
-                <a href="services.html" class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-gear mr-3 text-primary"></i>Services</a>
-                <a href="projects.html" class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-folder-open mr-3 text-primary"></i>Projects</a>
-                <a href="contact.html" class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
+                <a href="index.html"
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-home mr-3 text-primary"></i>Home</a>
+                <a href="about.html"
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-user-group mr-3 text-primary"></i>About</a>
+                <a href="services.html"
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-gear mr-3 text-primary"></i>Services</a>
+                <a href="projects.html"
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-folder-open mr-3 text-primary"></i>Projects</a>
+                <a href="contact.html"
+                    class="mobile-link text-lg font-poppins font-semibold text-textHeading dark:text-white hover:text-primary transition-colors py-2"><i
+                        class="fas fa-envelope mr-3 text-primary"></i>Contact</a>
             </div>
 
             <!-- Drawer Footer Contact and Action Info -->
@@ -346,7 +391,8 @@
                         </div>
                         <div class="header-contact-text">
                             <span class="header-contact-label">Email Us Here</span>
-                            <a href="mailto:gradixtechnologies@gmail.com" class="header-contact-value text-xs sm:text-sm md:text-base break-all">gradixtechnologies@gmail.com</a>
+                            <a href="mailto:gradixtechnologies@gmail.com"
+                                class="header-contact-value text-xs sm:text-sm md:text-base break-all">gradixtechnologies@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -368,11 +414,20 @@
                 </a>
 
                 <!-- Social Links -->
-                <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/60">
-                    <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-                    <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
-                    <a href="https://wa.me/9488783430" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-                    <a href="https://x.com/gradix_tech" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                <div
+                    class="flex items-center justify-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800/60">
+                    <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                    <a href="https://www.instagram.com/gradix_technologies/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="https://wa.me/9488783430" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    <a href="https://x.com/gradix_tech" target="_blank"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                        aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
                 </div>
             </div>
 
@@ -383,100 +438,151 @@
              ========================================== -->
         <section id="services-hero" class="pt-36 pb-24 relative z-10 px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
-                
+
                 <!-- Page Header -->
                 <div class="flex flex-col items-center text-center space-y-4 mb-20" data-aos="fade-up">
-                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our Services</span>
-                    <h1 class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white max-w-3xl leading-tight">
-                        Customizable Digital Solutions for your Growth
+                    <span class="text-primary font-poppins font-bold text-sm uppercase tracking-wider">Our
+                        Services</span>
+                    <h1
+                        class="text-4xl md:text-5xl font-black font-poppins text-textHeading dark:text-white max-w-3xl leading-tight">
+                        Customizable <span class="font-serif-italic text-primary dark:text-secondary">Digital
+                            Solutions</span> for your Growth
                     </h1>
                     <p class="text-textBody dark:text-slate-400 text-base max-w-2xl leading-relaxed">
-                        At Gradix Technologies, we design and deliver practical digital solutions focused on real business needs. Our approach combines strategy, technology, and performance to help brands grow sustainably in a competitive digital space.
+                        At Gradix Technologies, we design and deliver practical digital solutions focused on real
+                        business needs. Our approach combines strategy, technology, and performance to help brands grow
+                        sustainably in a competitive digital space.
                     </p>
                 </div>
 
                 <!-- Core 6 Services Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
-                    
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up"
+                    data-aos-delay="100">
+
                     <!-- 1. Web Development -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-primary opacity-60">[01]</div>
                         <div class="icon-container text-primary">
-                            <i class="fa-solid fa-code text-2xl transition-colors duration-400 text-[#2563EB]"></i>
+                            <i class="fa-solid fa-code text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Web Development</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Web Development
+                        </h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            Building websites that combine sleek design with robust functionality. Helping businesses connect, engage, and grow online.
+                            Building websites that combine sleek design with robust functionality. Helping businesses
+                            connect, engage, and grow online.
                         </p>
                     </div>
 
                     <!-- 2. UI / UX Development -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-secondary opacity-60">[02]</div>
                         <div class="icon-container text-secondary">
-                            <i class="fa-solid fa-compass-drafting text-2xl transition-colors duration-400 text-[#06B6D4]"></i>
+                            <i class="fa-solid fa-compass-drafting text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">UI / UX Development</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">UI / UX
+                            Development</h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            We design intuitive and engaging user interfaces that provide seamless experiences. Our Design turn complex ideas into user-friendly digital journeys.
+                            We design intuitive and engaging user interfaces that provide seamless experiences. Our
+                            Design turn complex ideas into user-friendly digital journeys.
                         </p>
                     </div>
 
                     <!-- 3. Software Development -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-accent opacity-60">[03]</div>
                         <div class="icon-container text-accent">
-                            <i class="fa-solid fa-laptop-code text-2xl transition-colors duration-400 text-[#F97316]"></i>
+                            <i class="fa-solid fa-laptop-code text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Software Development</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Software
+                            Development</h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            Building software that adapts to your needs. Reliable, innovative, and optimized for seamless performance and scalability.
+                            Building software that adapts to your needs. Reliable, innovative, and optimized for
+                            seamless performance and scalability.
                         </p>
                     </div>
 
                     <!-- 4. App Development -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="icon-container text-emerald-500">
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-primary opacity-60">[04]</div>
+                        <div class="icon-container text-primary">
                             <i class="fa-solid fa-mobile-screen text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">App Development</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">App Development
+                        </h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            Apps that captivate inspire and deliver results engage instantly Transforming concepts into mobile solutions that scale and perform inspire growth.
+                            Apps that captivate inspire and deliver results engage instantly Transforming concepts into
+                            mobile solutions that scale and perform inspire growth.
                         </p>
                     </div>
 
                     <!-- 5. Content Creations -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="icon-container text-indigo-500">
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-secondary opacity-60">[05]</div>
+                        <div class="icon-container text-secondary">
                             <i class="fa-solid fa-pen-nib text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Content Creations</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Content
+                            Creations</h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            Content that tells your story engages your audience and builds trust Transforming ideas into powerful experiences that create results.
+                            Content that tells your story engages your audience and builds trust Transforming ideas into
+                            powerful experiences that create results.
                         </p>
                     </div>
 
                     <!-- 6. Digital Marketing -->
-                    <div class="clever-panther-card group">
+                    <div class="clever-panther-card group relative">
+                        <span class="corner-plus cp-tl">+</span>
+                        <span class="corner-plus cp-tr">+</span>
+                        <span class="corner-plus cp-bl">+</span>
+                        <span class="corner-plus cp-br">+</span>
                         <div class="why-card-inner"></div>
-                        <div class="icon-container text-fuchsia-500">
+                        <div class="absolute top-4 left-6 font-mono text-[10px] text-accent opacity-60">[06]</div>
+                        <div class="icon-container text-accent">
                             <i class="fa-solid fa-magnifying-glass-chart text-2xl transition-colors duration-400"></i>
                         </div>
-                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Digital Marketing</h3>
+                        <h3 class="font-poppins font-bold text-xl text-textHeading dark:text-white mb-3">Digital
+                            Marketing</h3>
                         <p class="text-sm text-textBody dark:text-slate-400 leading-relaxed">
-                            Digital marketing that connects engages and converts drive growth Creating campaigns that grow your brand inspire action and deliver impact boost visibility.
+                            Digital marketing that connects engages and converts drive growth Creating campaigns that
+                            grow your brand inspire action and deliver impact boost visibility.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- Custom Free Strategy Call CTA Banner -->
-                <div class="mt-16 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-primary/10 via-secondary/10 to-transparent border border-primary/20 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8" data-aos="fade-up" data-aos-delay="200">
+                <div class="mt-16 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-primary/10 via-secondary/10 to-transparent border border-primary/20 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="flex flex-col space-y-2 text-left">
-                        <h4 class="font-poppins font-bold text-xl md:text-2xl text-textHeading dark:text-white">Need a custom solution?</h4>
-                        <p class="text-sm text-textBody dark:text-slate-400 max-w-xl">Let’s plan and build the right solution for your business.</p>
+                        <h4 class="font-poppins font-bold text-xl md:text-2xl text-textHeading dark:text-white">Need a
+                            custom solution?</h4>
+                        <p class="text-sm text-textBody dark:text-slate-400 max-w-xl">Let’s plan and build the right
+                            solution for your business.</p>
                     </div>
                     <a href="contact.html" class="btn-young-newt py-4 px-8 text-sm font-semibold whitespace-nowrap">
                         Get a Free Strategy Call <i class="fas fa-phone-flip text-xs ml-2"></i>
@@ -491,22 +597,32 @@
              ========================================== -->
         <footer class="bg-[#0F172A] text-slate-400 relative z-10 pt-20 border-t border-slate-800 dark:border-slate-900">
             <div class="max-w-7xl mx-auto px-6 lg:px-8 pb-12">
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-                    
+
                     <div class="lg:col-span-4 flex flex-col space-y-6">
-                        <a href="index.html" class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
+                        <a href="index.html"
+                            class="flex items-center focus:outline-none focus:ring-2 focus:ring-primary/20 rounded">
                             <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto">
                         </a>
                         <p class="text-sm leading-relaxed max-w-sm">
-                            Redefining enterprise software engineering. We develop high-performance applications, responsive sites, and secure cloud pipelines that drive corporate expansion.
+                            Redefining enterprise software engineering. We develop high-performance applications,
+                            responsive sites, and secure cloud pipelines that drive corporate expansion.
                         </p>
-                        
+
                         <div class="flex gap-4">
-                            <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-                            <a href="https://www.instagram.com/gradix_technologies/" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
-                            <a href="https://wa.me/9488783430" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
-                            <a href="https://x.com/gradix_tech" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none" aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                            <a href="https://www.linkedin.com/company/gradix-technologies/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                            <a href="https://www.instagram.com/gradix_technologies/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="Instagram Profile"><i class="fa-brands fa-instagram text-sm"></i></a>
+                            <a href="https://wa.me/9488783430" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="WhatsApp Contact"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                            <a href="https://x.com/gradix_tech" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 text-slate-300 focus:outline-none"
+                                aria-label="X Profile"><i class="fa-brands fa-x-twitter text-sm"></i></a>
                         </div>
                     </div>
 
@@ -524,12 +640,18 @@
                     <div class="lg:col-span-3 flex flex-col space-y-6 text-left">
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Services</h4>
                         <ul class="space-y-3.5 text-sm">
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Web Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">UI / UX Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Software Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">App Development</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Content Creations</a></li>
-                            <li><a href="services.html" class="hover:text-primary transition-colors">Digital Marketing</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Web Development</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">UI / UX
+                                    Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Software
+                                    Development</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">App Development</a>
+                            </li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Content
+                                    Creations</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors">Digital
+                                    Marketing</a></li>
                         </ul>
                     </div>
 
@@ -537,25 +659,30 @@
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
                         <ul class="space-y-3.5 text-sm">
                             <li>
-                                <a href="mailto:gradixtechnologies@gmail.com" class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i> gradixtechnologies@gmail.com
+                                <a href="mailto:gradixtechnologies@gmail.com"
+                                    class="hover:text-primary transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i>
+                                    gradixtechnologies@gmail.com
                                 </a>
                             </li>
                             <li>
-                                <a href="tel:+919488783430" class="hover:text-primary transition-colors flex items-center gap-2">
+                                <a href="tel:+919488783430"
+                                    class="hover:text-primary transition-colors flex items-center gap-2">
                                     <i class="fa-solid fa-phone text-secondary text-xs"></i> +91 94887 83430
                                 </a>
                             </li>
                             <li class="flex items-start gap-2 leading-relaxed text-xs text-slate-400">
                                 <i class="fa-solid fa-map-location-dot text-secondary text-xs mt-1 shrink-0"></i>
-                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode, Namakkal, 637 215.</span>
+                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode,
+                                    Namakkal, 637 215.</span>
                             </li>
                         </ul>
                     </div>
 
                 </div>
 
-                <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs gap-4">
+                <div
+                    class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs gap-4">
                     <span>&copy; 2026 Gradix Technologies. All rights reserved.</span>
                     <div class="flex gap-6">
                         <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -578,9 +705,22 @@
 
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+
+    <!-- Technical Debug Panel -->
+    <div class="debug-panel">
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">X: <span data-debug-x>0</span></div>
+            <div class="debug-panel-item">Y: <span data-debug-y>0</span></div>
+        </div>
+        <div class="debug-panel-group">
+            <div class="debug-panel-item">Scroll: <span data-debug-scroll>0%</span></div>
+            <div class="debug-panel-item">Time: <span data-debug-time>00:00:00</span></div>
+        </div>
+    </div>
+
     <!-- Custom Page Script -->
     <script src="js/script.js"></script>
 
 </body>
+
 </html>
