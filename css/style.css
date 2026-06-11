@@ -2662,7 +2662,6 @@ html.dark .premium-hero .hero-disc::after {
 
 html.dark .premium-hero .hero-disc-inner {
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 75%);
-    -webkit-background-clip: text !important;
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05);
 }
@@ -2676,7 +2675,10 @@ html.dark .premium-hero .hero-disc .hero-disc-inner i {
 html.dark .premium-hero .hero-content h1 {
     text-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
     background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
 }
 
 html.dark .premium-hero .hero-content p {
