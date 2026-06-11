@@ -36,14 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. SCROLL PROGRESS INDICATOR
     // ==========================================
     const scrollProgress = document.getElementById('scroll-progress');
-    window.addEventListener('scroll', () => {
+
+    function updateScrollProgress() {
         const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const currentScrollPos = window.scrollY;
         if (totalScrollHeight > 0 && scrollProgress) {
-            const percentage = (currentScrollPos / totalScrollHeight) * 100;
+            const percentage = Math.min(100, Math.max(0, Math.round((currentScrollPos / totalScrollHeight) * 100)));
             scrollProgress.style.width = `${percentage}%`;
         }
-    });
+    }
+
+    window.addEventListener('scroll', updateScrollProgress);
+    window.addEventListener('resize', updateScrollProgress);
+    updateScrollProgress();
 
     // ==========================================
     // 3. PREMIUM INTERACTIVE CURSOR & BLUEPRINT DEBUG PANEL & TEXT ROLL
@@ -127,26 +132,197 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorDot.style.display = 'none';
     }
 
-    // Live Tickers & Debug Updates (Time, Scroll Percentage)
+    // Live Tickers & Debug Updates (Time, Scroll Fraction)
     const debugScroll = document.querySelector('[data-debug-scroll]');
     const debugTime = document.querySelector('[data-debug-time]');
+    
+    // Elapsed Seconds Counter (60fps animation loop)
+    const pageLoadTime = performance.now();
+    function updateHUDTime() {
+        if (debugTime) {
+            const elapsed = (performance.now() - pageLoadTime) / 1000;
+            debugTime.textContent = elapsed.toFixed(1) + 'S';
+        }
+        requestAnimationFrame(updateHUDTime);
+    }
+    requestAnimationFrame(updateHUDTime);
 
     function updateDebugStats() {
         if (debugScroll) {
             const totalScrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const currentScrollPos = window.scrollY;
-            const percentage = totalScrollHeight > 0 ? Math.round((currentScrollPos / totalScrollHeight) * 100) : 0;
-            debugScroll.textContent = `${percentage}%`;
-        }
-        if (debugTime) {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
-            debugTime.textContent = timeString;
+            const percentage = totalScrollHeight > 0
+    ? (currentScrollPos / totalScrollHeight) * 100
+    : 0;
+
+debugScroll.textContent =
+    `${Math.round(percentage)}%`;
         }
     }
     window.addEventListener('scroll', updateDebugStats);
-    setInterval(updateDebugStats, 1000);
     updateDebugStats(); // Initial call
+
+    // ==========================================
+    // HUD HERO SCROLL & PARALLAX ANIMATIONS (Unified Double-Lerp System)
+    // ==========================================
+    const premiumHero = document.querySelector('#home-hero.premium-hero');
+    const heroCenter = document.querySelector('.hero-center-content');
+    const discs = document.querySelectorAll('.hero-disc');
+
+    let targetScroll = 0;
+    let currentScroll = 0;
+
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+    let currentMouseX = 0;
+    let currentMouseY = 0;
+
+    // Normalize mouse coordinates (-1 to 1) relative to center of screen
+    function updateHeroMouse(event) {
+        if (!premiumHero) return;
+        const rect = premiumHero.getBoundingClientRect();
+        targetMouseX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+        targetMouseY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+    }
+
+    function resetHeroMouse() {
+        targetMouseX = 0;
+        targetMouseY = 0;
+    }
+
+    if (premiumHero) {
+        premiumHero.addEventListener('mousemove', updateHeroMouse, { passive: true });
+        premiumHero.addEventListener('mouseleave', resetHeroMouse, { passive: true });
+        premiumHero.addEventListener('pointermove', updateHeroMouse, { passive: true });
+        premiumHero.addEventListener('pointerleave', resetHeroMouse, { passive: true });
+    }
+
+    // Scroll progress normalized from 0 (top) to 1 (scrolled past hero section)
+    function updateTargetScroll() {
+        if (!premiumHero) return;
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight || 800;
+        targetScroll = Math.min(Math.max(scrollY / viewportHeight, 0), 1.25);
+    }
+    
+    window.addEventListener('scroll', updateTargetScroll, { passive: true });
+    window.addEventListener('resize', updateTargetScroll, { passive: true });
+    updateTargetScroll(); // Initial computation
+
+    // Core Animation Tick Loop
+    function tickHeroAnimation() {
+        if (!premiumHero) {
+            requestAnimationFrame(tickHeroAnimation);
+            return;
+        }
+
+        // double-lerping values for luxury inertia effect
+        currentScroll += (targetScroll - currentScroll) * 0.08;
+        currentMouseX += (targetMouseX - currentMouseX) * 0.08;
+        currentMouseY += (targetMouseY - currentMouseY) * 0.08;
+
+        // 1. Center Hero content scroll-fade, scale-down, and blur (starts at 90% scroll)
+        if (heroCenter) {
+            // Keep the text completely sharp for the first 90% of the scroll.
+            // Then rapidly fade and blur it as the next section covers the viewport.
+            const startScroll = 0.9;
+            const transitionProgress = currentScroll < startScroll
+                ? 0
+                : Math.min((currentScroll - startScroll) / (1.15 - startScroll), 1);
+
+            const opacity = Math.max(1 - transitionProgress * 1.3, 0);
+            const scale = 1 - transitionProgress * 0.15;
+            const blur = transitionProgress * 22;
+
+            heroCenter.style.opacity = opacity;
+            heroCenter.style.transform = `scale(${scale}) translate3d(0, 0, 0)`;
+            heroCenter.style.filter = `blur(${blur}px)`;
+        }
+
+        // Viewport scale factor to ensure coordinates are responsive across screens
+        // Bounded to a minimum of 0.4 so elements don't collapse too close to the text on mobile
+        const screenScale = Math.max(Math.min(window.innerWidth / 1440, 1.0), 0.4);
+
+        // Compute separate scale factors for X and Y coordinates to prevent off-screen clipping on narrow mobile devices
+        let screenScaleX = screenScale;
+        let screenScaleY = screenScale;
+
+        if (window.innerWidth < 768) {
+            screenScaleX = Math.max(Math.min(window.innerWidth / 1440, 1.0), 0.28);
+            screenScaleY = Math.max(Math.min(window.innerHeight / 900, 1.0), 0.55);
+        }
+
+        // 2. Floating glassmorphism objects 3D explosion and parallax (starts at 50% scroll)
+        const startDiscsScroll = 0.5;
+        const discsProgress = currentScroll < startDiscsScroll
+            ? 0
+            : Math.min((currentScroll - startDiscsScroll) / (1.15 - startDiscsScroll), 1.25);
+
+        discs.forEach((disc, idx) => {
+            let baseX = parseFloat(disc.dataset.x) || 0;
+            let baseY = parseFloat(disc.dataset.y) || 0;
+            const z = parseFloat(disc.dataset.z) || 0.5;
+
+            // Restructure baseline positions on mobile so all 6 chips frame the text without overlaps
+            if (window.innerWidth < 640) {
+                // Left Column Chips
+                if (idx === 0) { baseX = -440; baseY = -220; }
+                if (idx === 2) { baseX = -440; baseY = 0; }
+                if (idx === 4) { baseX = -440; baseY = 220; }
+                // Right Column Chips
+                if (idx === 1) { baseX = 440; baseY = -220; }
+                if (idx === 3) { baseX = 440; baseY = 0; }
+                if (idx === 5) { baseX = 440; baseY = 220; }
+            }
+
+            // Responsive organic positioning using separate X and Y scales
+            const responsiveBaseX = baseX * screenScaleX;
+            const responsiveBaseY = baseY * screenScaleY;
+
+            // Ease scroll progression for smooth explosion acceleration
+            const scrollProgressScaled = Math.pow(discsProgress, 1.3);
+
+            // Zoom expansion: closer objects fly outward and zoom past faster
+            const scrollExpansion = 1 + (scrollProgressScaled / z) * 2.5;
+            const scrollX = responsiveBaseX * scrollExpansion;
+            const scrollY = responsiveBaseY * scrollExpansion;
+
+            // Scale progressively based on scroll (camera flies through)
+            const scaleFactor = 1 + (scrollProgressScaled / z) * 2.2;
+            const baseScale = z > 0.6 ? 0.75 : (z > 0.4 ? 0.95 : 1.25);
+            const scale = baseScale * scaleFactor;
+
+            // Mouse Parallax: foreground items move more, background items move less
+            const parallaxStrength = 42 * (1.5 - z);
+            const parallaxX = currentMouseX * parallaxStrength * scale;
+            const parallaxY = currentMouseY * parallaxStrength * scale;
+
+            // Combined positioning
+            const x = scrollX + parallaxX;
+            const y = scrollY + parallaxY;
+
+            // Opacity: fades out as elements pass the camera lens
+            const opacity = Math.max(1 - scrollProgressScaled / z, 0);
+
+            // Blur: Simulated depth-of-field focal blurring using quadratic ease
+            const blurProgress = Math.pow(discsProgress, 1.8);
+            const blur = (blurProgress / z) * 20;
+
+            // Slight rotation during movement
+            const rotateSpeed = (1.5 - z) * 35;
+            const rotation = discsProgress * rotateSpeed;
+
+            // Apply transformations with GPU hardware acceleration
+            disc.style.transform = `translate3d(calc(-50% + ${x}px), calc(-50% + ${y}px), 0) scale(${scale}) rotate(${rotation}deg)`;
+            disc.style.opacity = opacity;
+            disc.style.filter = `blur(${blur}px)`;
+        });
+
+        requestAnimationFrame(tickHeroAnimation);
+    }
+
+    // Launch loop
+    tickHeroAnimation();
 
     // Dynamic Text Roll Constructor
     const rollElements = document.querySelectorAll('.text-roll');
@@ -179,33 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ==========================================
-    // 4. MAGNETIC BUTTONS FORCE
-    // ==========================================
-    const magneticBtns = document.querySelectorAll('.btn-young-newt, .btn-young-newt-secondary');
-    
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            // Calculate absolute distance between cursor and center of button
-            const btnX = rect.left + rect.width / 2;
-            const btnY = rect.top + rect.height / 2;
-            
-            const distanceX = e.clientX - btnX;
-            const distanceY = e.clientY - btnY;
-            
-            // Pull factor
-            const pullForce = 0.28;
-            
-            btn.style.transform = `translate3d(${distanceX * pullForce}px, ${distanceY * pullForce}px, 0)`;
-            btn.style.boxShadow = `0 15px 35px -5px rgba(37, 99, 235, 0.5), ${distanceX * 0.1}px ${distanceY * 0.1}px 20px rgba(6, 182, 212, 0.3)`;
-        });
 
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translate3d(0px, 0px, 0px)';
-            btn.style.boxShadow = '';
-        });
-    });
 
     // ==========================================
     // 5. STICKY NAVBAR & SCROLL SHADOW

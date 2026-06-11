@@ -343,18 +343,9 @@
                         </button>
 
                         <!-- Request a Quote -->
-                        <a href="contact.html" class="btn-smart-moth">
-                            <div class="svg-wrapper-1">
-                                <div class="svg-wrapper">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
-                                        class="fill-current">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path
-                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
+                        <a href="contact.html" class="btn-smart-moth group">
+                            <i
+                                class="fa-solid fa-paper-plane text-xs mr-2 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:rotate-12"></i>
                             <span>Request A Quote</span>
                         </a>
                     </div>
@@ -446,18 +437,9 @@
                 </div>
 
                 <!-- Yellow CTA button -->
-                <a href="contact.html" class="btn-smart-moth">
-                    <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
-                                class="fill-current">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path
-                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
+                <a href="contact.html" class="btn-smart-moth group">
+                    <i
+                        class="fa-solid fa-paper-plane text-xs mr-2 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:rotate-12"></i>
                     <span>Request A Quote</span>
                 </a>
 
@@ -465,127 +447,91 @@
 
         </div>
 
+
         <!-- ==========================================
-             2. HERO SECTION
+             PREMIUM HERO SECTION
              ========================================== -->
         <section id="home-hero"
-            class="min-h-screen flex items-center pt-24 pb-12 relative z-10 px-6 lg:px-8 border-b border-slate-100 dark:border-slate-900/50">
-            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            class="premium-hero relative w-full min-h-screen overflow-hidden text-textHeading dark:text-white">
 
-                <!-- Hero Content (Left) -->
-                <div class="flex flex-col space-y-8" data-aos="fade-right">
-                    <!-- Badge -->
-                    <div
-                        class="inline-flex items-center gap-2 self-start py-1.5 px-4 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-xs tracking-wide uppercase font-poppins">
-                        🚀 Trusted Software Development Company
+            <div class="hero-noise"></div>
+
+            <div class="hero-streaks pointer-events-none">
+                <span class="hero-streak left-10 top-16 h-[52%]"></span>
+                <span class="hero-streak left-[22%] top-28 h-[40%]"></span>
+                <span class="hero-streak left-[38%] top-12 h-[58%]"></span>
+                <span class="hero-streak right-16 top-20 h-[45%]"></span>
+                <span class="hero-streak right-[22%] top-32 h-[50%]"></span>
+            </div>
+
+            <div class="hero-glows pointer-events-none">
+                <div class="hero-glow glow-1"></div>
+                <div class="hero-glow glow-2"></div>
+                <div class="hero-glow glow-3"></div>
+            </div>
+
+            <div class="hero-disc-layer pointer-events-none">
+                <!-- 1. Code (Distant Background) -->
+                <div class="hero-disc" data-x="-380" data-y="-180" data-z="0.9">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-code"></i>
                     </div>
+                </div>
+                <!-- 2. Compass Drafting (Medium-Distant) -->
+                <div class="hero-disc" data-x="420" data-y="-140" data-z="0.6">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                </div>
+                <!-- 3. Laptop Code (Medium-Distant) -->
+                <div class="hero-disc" data-x="-480" data-y="120" data-z="0.75">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                </div>
+                <!-- 4. Mobile Screen (Medium-Close) -->
+                <div class="hero-disc" data-x="450" data-y="80" data-z="0.4">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                </div>
+                <!-- 5. Pen Nib (Distant-Medium) -->
+                <div class="hero-disc" data-x="-220" data-y="280" data-z="0.8">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                </div>
+                <!-- 6. Magnifying Glass Chart (Close Foreground) -->
+                <div class="hero-disc" data-x="280" data-y="260" data-z="0.25">
+                    <div class="hero-disc-inner">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Main Heading -->
+            <div class="hero-content relative z-20 flex min-h-screen items-center justify-center px-6 py-24">
+                <div class="hero-center-content max-w-4xl text-center space-y-8">
+                    <span
+                        class="inline-flex rounded-full border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/5 px-4 py-2 text-xs tracking-[0.35em] text-textBody dark:text-slate-300 uppercase shadow-[0_0_40px_rgba(0,0,0,0.02)] dark:shadow-[0_0_40px_rgba(255,255,255,0.05)]">A
+                        digital product studio</span>
                     <h1
-                        class="text-4xl md:text-5xl lg:text-6xl font-black font-poppins leading-[1.1] text-textHeading dark:text-white">
-                        Accelerate Your Business Growth with <span
-                            class="bg-gradient-to-r from-primary via-blue-500 to-secondary bg-clip-text text-transparent">Gradix
-                            Technologies</span>
-                    </h1>
-
-                    <!-- Subheading -->
-                    <p class="text-lg text-textBody dark:text-slate-400 leading-relaxed max-w-xl">
-                        Gradix Technologies helps startups and businesses grow through reliable digital solutions,
-                        modern design, and performance-focused strategies.
-                    </p>
-
-                    <!-- Action Buttons -->
-                    <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="contact.html" class="btn-young-newt text-sm font-semibold">
-                            Get Free Consultation <i class="fas fa-chevron-right text-xs"></i>
-                        </a>
-                        <a href="services.html" class="btn-young-newt-secondary text-sm font-semibold">
-                            View Services <i class="fas fa-gear text-xs"></i>
+                        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[0.95] text-textHeading dark:text-white md:bg-clip-text md:text-transparent">
+                        Accelerate Your Business Growth with Gradix Technologies</h1>
+                    <p class="max-w-2xl mx-auto text-base sm:text-lg text-textBody dark:text-slate-300 leading-8">Gradix
+                        Technologies helps startups and businesses grow through reliable digital solutions, modern
+                        design, and performance-focused strategies.</p>
+                    <div class="flex items-center justify-center pt-4">
+                        <a href="contact.html"
+                            class="hero-btn hero-btn-primary inline-flex items-center justify-center px-8 py-4 group">
+                            <span>Contact Us</span>
+                            <i
+                                class="fa-solid fa-arrow-right ml-2.5 transition-transform duration-300 group-hover:translate-x-1.5"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- Conceptual CSS Illustration (Right) -->
-                <div class="relative w-full h-[480px] md:h-[520px] flex items-center justify-center hero-illustration-wrapper"
-                    data-aos="zoom-in" data-aos-delay="200">
-
-                    <!-- Radial background glows -->
-                    <div
-                        class="absolute w-64 h-64 rounded-full bg-primary/8 dark:bg-primary/5 blur-3xl pointer-events-none">
-                    </div>
-                    <div
-                        class="absolute w-64 h-64 rounded-full bg-secondary/8 dark:bg-secondary/5 blur-3xl pointer-events-none translate-x-12 translate-y-12">
-                    </div>
-
-                    <!-- Center Gradix Card -->
-                    <div
-                        class="relative w-40 h-40 md:w-56 md:h-56 flex flex-col items-center justify-center p-4 md:p-6 bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/80 shadow-xl rounded-3xl transition-all duration-500 hover:scale-110 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-primary/10 dark:hover:shadow-primary/20 z-20 cursor-default select-none group">
-                        <img src="imgs/logo-dark.png" alt="Gradix Technologies Logo"
-                            class="h-9 md:h-14 w-auto block dark:hidden group-hover:scale-105 transition-transform duration-500">
-                        <img src="imgs/logo-light.png" alt="Gradix Technologies Logo"
-                            class="h-9 md:h-14 w-auto hidden dark:block group-hover:scale-105 transition-transform duration-500">
-                    </div>
-
-                    <!-- Orbiting Pill Tags -->
-                    <!-- 1. Web Dev -->
-                    <div class="absolute top-[24%] left-[4%] md:left-[20%] z-10 orbiting-pill pill-1">
-                        <div
-                            class="ani-float-1 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-globe text-[#2563EB]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Web
-                                Dev</span>
-                        </div>
-                    </div>
-                    <!-- 2. UI / UX -->
-                    <div class="absolute top-[28%] right-[2%] md:right-[14%] z-10 orbiting-pill pill-2">
-                        <div
-                            class="ani-float-2 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-palette text-[#8B5CF6]"></i>
-                            <span class="font-poppins font-semibold text-xs text-textHeading dark:text-white">UI /
-                                UX</span>
-                        </div>
-                    </div>
-                    <!-- 3. Software -->
-                    <div class="absolute top-[48%] right-[0%] md:right-[12%] z-10 orbiting-pill pill-3">
-                        <div
-                            class="ani-float-3 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-code text-[#10B981]"></i>
-                            <span
-                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Software</span>
-                        </div>
-                    </div>
-                    <!-- 4. Apps -->
-                    <div class="absolute top-[68%] right-[4%] md:right-[18%] z-10 orbiting-pill pill-4">
-                        <div
-                            class="ani-float-4 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-mobile-screen text-[#F59E0B]"></i>
-                            <span
-                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Apps</span>
-                        </div>
-                    </div>
-                    <!-- 5. Marketing -->
-                    <div class="absolute bottom-[20%] left-[25%] md:left-[34%] z-10 orbiting-pill pill-5">
-                        <div
-                            class="ani-float-5 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-chart-line text-[#EC4899]"></i>
-                            <span
-                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Marketing</span>
-                        </div>
-                    </div>
-                    <!-- 6. Content -->
-                    <div class="absolute top-[50%] left-[2%] md:left-[18%] z-10 orbiting-pill pill-6">
-                        <div
-                            class="ani-float-6 bg-white/95 dark:bg-slate-900/95 border border-slate-100 dark:border-slate-800/80 px-3 py-2 md:px-4 md:py-2.5 rounded-xl md:rounded-2xl flex items-center gap-2 md:gap-3 shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg select-none cursor-default">
-                            <i class="fa-solid fa-pen-nib text-[#06B6D4]"></i>
-                            <span
-                                class="font-poppins font-semibold text-xs text-textHeading dark:text-white">Content</span>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </section>
+
 
         <!-- ==========================================
              2B. PREMIUM DIAGONAL RIBBONS (Marquee Ticker)
@@ -803,7 +749,6 @@
 
         <!-- ==========================================
              3. ABOUT SUMMARY
-
              ========================================== -->
         <section id="home-about"
             class="py-24 relative z-10 px-6 lg:px-8 border-t border-slate-100 dark:border-slate-900 bg-slate-50/50 dark:bg-slate-900/10">
@@ -830,10 +775,14 @@
                     <!-- Action Buttons -->
                     <div class="flex flex-wrap items-center gap-6 pt-4">
                         <a href="contact.html"
-                            class="inline-flex items-center justify-center bg-primary hover:bg-primary/95 text-white font-poppins font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-0.5">
-                            Work With Us
+                            class="hero-btn hero-btn-primary inline-flex items-center justify-center px-6 py-3 group">
+
+                            Work With Us <i
+                                class="fa-solid fa-arrow-right ml-2.5 transition-transform duration-300 group-hover:translate-x-1.5"></i>
+
                         </a>
                     </div>
+
                 </div>
 
                 <!-- Right: Large Leaf-Shaped Image -->
@@ -1018,8 +967,10 @@
                         <p class="text-sm text-textBody dark:text-slate-400 max-w-xl">Let’s plan and build the right
                             solution for your business.</p>
                     </div>
-                    <a href="contact.html" class="btn-young-newt py-4 px-8 text-sm font-semibold whitespace-nowrap">
+                    <a href="contact.html"
+                        class="btn-gradix-glow group py-4 px-8 text-sm font-semibold whitespace-nowrap">
                         Get a Free Strategy Call <i class="fas fa-phone-flip text-xs ml-2"></i>
+                        <span class="btn-dots"></span>
                     </a>
                 </div>
 
@@ -1164,8 +1115,10 @@
 
                 <!-- CTA Button under steps -->
                 <div class="flex justify-center mt-16" data-aos="fade-up" data-aos-delay="200">
-                    <a href="contact.html" class="btn-young-newt text-sm font-semibold">
+                    <a href="contact.html"
+                        class="btn-gradix-glow group py-4 px-8 text-sm font-semibold whitespace-nowrap">
                         Start Your Project <i class="fas fa-arrow-right text-xs ml-2"></i>
+                        <span class="btn-dots"></span>
                     </a>
                 </div>
 
@@ -1257,8 +1210,10 @@
                         </p>
 
                         <div class="pt-2">
-                            <a href="projects.html" class="btn-young-newt text-sm font-semibold">
-                                View Our Portfolio <i class="fas fa-arrow-right text-xs ml-2"></i>
+                            <a href="projects.html"
+                                class="btn-gradix-glow group py-4 px-8 text-sm font-semibold whitespace-nowrap">
+                                View All Projects <i class="fas fa-arrow-right text-xs ml-2"></i>
+                                <span class="btn-dots"></span>
                             </a>
                         </div>
                     </div>
@@ -1466,8 +1421,9 @@
                             <img src="imgs/logo-light.png" alt="Gradix Technologies Logo" class="h-10 w-auto">
                         </a>
                         <p class="text-sm leading-relaxed max-w-sm">
-                            Redefining enterprise software engineering. We develop high-performance applications,
-                            responsive sites, and secure cloud pipelines that drive corporate expansion.
+                            Building Reliable Digital Solutions. Gradix Technologies delivers web, mobile, and software
+                            solutions tailored to business needs. We focus on quality engineering, usability, and
+                            scalable digital growth.
                         </p>
 
                         <div class="flex gap-4">
@@ -1517,23 +1473,20 @@
 
                     <div class="lg:col-span-3 flex flex-col space-y-6 text-left">
                         <h4 class="font-poppins font-bold text-white text-base tracking-wider">Contact Info</h4>
-                        <ul class="space-y-3.5 text-sm">
-                            <li>
+                        <ul class="space-y-4 text-sm leading-relaxed">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-primary shrink-0"></i>
                                 <a href="mailto:gradixtechnologies@gmail.com"
-                                    class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-envelope text-secondary text-xs"></i>
-                                    gradixtechnologies@gmail.com
-                                </a>
+                                    class="hover:text-primary transition-colors">gradixtechnologies@gmail.com</a>
                             </li>
-                            <li>
-                                <a href="tel:+919488783430"
-                                    class="hover:text-primary transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-phone text-secondary text-xs"></i> +91 94887 83430
-                                </a>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-primary shrink-0"></i>
+                                <a href="tel:+919488783430" class="hover:text-primary transition-colors">+91 94887
+                                    83430</a>
                             </li>
-                            <li class="flex items-start gap-2 leading-relaxed text-xs text-slate-400">
-                                <i class="fa-solid fa-map-location-dot text-secondary text-xs mt-1 shrink-0"></i>
-                                <span>Ground Floor, PTC block,<br>K S Rangasamy college of Technology,<br>Tiruchengode,
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-location-dot text-primary mt-1 shrink-0"></i>
+                                <span>Ground Floor, PTC block, K S Rangasamy college of Technology, Tiruchengode,
                                     Namakkal, 637 215.</span>
                             </li>
                         </ul>
@@ -1541,9 +1494,12 @@
 
                 </div>
 
-                <div
-                    class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs gap-4">
-                    <span>&copy; 2026 Gradix Technologies. All rights reserved.</span>
+                <!-- Footer Divider -->
+                <div class="h-[1px] w-full bg-slate-800/80 dark:bg-slate-900 mb-8"></div>
+
+                <!-- Footer Bottom row -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <span>&copy; 2026 Gradix Technologies. All Rights Reserved.</span>
                     <div class="flex gap-6">
                         <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
@@ -1610,7 +1566,6 @@
 
         </div>
     </div>
-
     <!-- ==========================================
          D. FLOATING ACTION BACK TO TOP BUTTON
          ========================================== -->
@@ -1621,8 +1576,26 @@
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+    <!-- HUD Footer -->
+    <footer id="hud-footer"
+        class="fixed bottom-0 left-0 w-full z-50 flex items-center justify-between px-6 py-2 bg-black border-t border-white/5 font-mono text-[11px] text-zinc-500 uppercase tracking-wider select-none pointer-events-auto">
+        <!-- Left: Cursor X & Y -->
+        <div class="flex items-center gap-4">
+            <div>X: <span class="text-[#2563EB] font-semibold" data-debug-x>0</span></div>
+            <div>Y: <span class="text-[#2563EB] font-semibold" data-debug-y>0</span></div>
+        </div>
+
+        <!-- Right: Scroll & Time -->
+        <div class="flex items-center gap-4">
+            <div>Scroll: <span class="text-[#2563EB] font-semibold" data-debug-scroll>0.000</span></div>
+            <div>Time: <span class="text-[#2563EB] font-semibold" data-debug-time>0.0S</span></div>
+        </div>
+    </footer>
+
+
     <!-- Custom Page Script -->
     <script src="js/script.js"></script>
+
 
 </body>
 
